@@ -1,1 +1,22 @@
+:root {
+  /* Colors */
+  --bg-0: #ffffff;
+  --bg-100: #edeeef;
+  --border: #c8c8c8;
+  --fg-text: #222224;
+  --fg-subtext: #969698;
+  --fg-primary: #482cff;
 
+  /* Font families */
+  --font-sans: "SF Pro Text", "SF Pro Display", -apple-system, BlinkMacSystemFont,
+    "Helvetica Neue", "Segoe UI", sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, monospace;
+
+  /* Layout */
+  --page-max: 1920px;
+  --page-pad: 24px;
+  --grid-gap: 16px;
+  --section-gap: 96px;
+  --block-gap: 48px;
+  --page-stack-gap: 80px;
+}
