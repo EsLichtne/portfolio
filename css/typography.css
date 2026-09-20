@@ -35,6 +35,10 @@
   text-decoration-skip-ink: none;
 }
 
+a:hover {
+  opacity: 0.7;
+}
+
 .number {
   font-family: var(--font-sans);
   font-weight: 700;
