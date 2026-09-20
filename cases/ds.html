@@ -1,1 +1,739 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      AskBefore: мультибрендовая дизайн-система — Ксения Шевелёва
+    </title>
+    <meta
+      name="description"
+      content="Кейс: мультибрендовая дизайн-система AskBefore для трёх продуктов — токены, компоненты, спецификации и синхронизация Figma с кодом."
+    />
+    <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/tokens.css" />
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="../css/typography.css" />
+    <link rel="stylesheet" href="../css/main.css" />
+  </head>
+  <body>
+    <div class="page">
+      <header class="header">
+        <div class="limiter header__inner">
+          <a class="header__brand" href="../" aria-label="На главную">
+            <span class="header__logo">
+              <img
+                src="../assets/images/logo.svg"
+                width="32"
+                height="40"
+                alt=""
+              />
+            </span>
+          </a>
 
+          <nav class="header__nav" aria-label="Основная навигация">
+            <div class="header__links">
+              <a class="link header__link" href="#">CV</a>
+              <a class="link header__link" href="#">Telegram</a>
+              <a class="link header__link" href="#">Linkedin</a>
+            </div>
+            <p class="text header__lang" aria-label="Язык">
+              <span aria-current="true">Ru</span>|<a href="../en/">Eng</a>
+            </p>
+          </nav>
+        </div>
+      </header>
+
+      <div class="main">
+        <main class="main__content case-page">
+          <div class="case-main">
+            <div class="case-hero">
+              <a class="link case-hero__back" href="../">Все&nbsp;кейсы</a>
+
+              <div class="case-hero__heading">
+                <h1 class="heading case-hero__title">
+                  AskBefore: мультибрендовая дизайн-система для&nbsp;трёх
+                  продуктов
+                </h1>
+                <p class="text case-hero__date">апр. 2026&nbsp;— авг. 2026</p>
+              </div>
+
+              <div class="case-hero__cover">
+                <img
+                  src="../assets/images/cases/ds/cover.webp"
+                  alt="Коллаж компонентов мультибрендовой дизайн-системы AskBefore"
+                  width="3680"
+                  height="2720"
+                />
+              </div>
+
+              <div class="case-hero__meta">
+                <p class="text">3&nbsp;продукта</p>
+                <p class="text">Design system</p>
+                <div class="case-hero__meta-end">
+                  <p class="text">Storybook</p>
+                  <p class="text">Figma + code</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="case-body">
+              <nav class="case-toc" aria-label="Содержание кейса" data-case-toc>
+              <a class="case-toc__item is-active" href="#context">
+                <span class="text case-toc__num">01</span>
+                <span class="text case-toc__label">Контекст</span>
+              </a>
+              <a class="case-toc__item" href="#task">
+                <span class="text case-toc__num">02</span>
+                <span class="text case-toc__label">Задача</span>
+              </a>
+              <a class="case-toc__item" href="#tokens">
+                <span class="text case-toc__num">03</span>
+                <span class="text case-toc__label">Токены</span>
+              </a>
+              <a class="case-toc__item" href="#components">
+                <span class="text case-toc__num">04</span>
+                <span class="text case-toc__label">Компоненты</span>
+              </a>
+              <a class="case-toc__item" href="#specs">
+                <span class="text case-toc__num">05</span>
+                <span class="text case-toc__label">Спецификации</span>
+              </a>
+              <a class="case-toc__item" href="#results">
+                <span class="text case-toc__num">06</span>
+                <span class="text case-toc__label"
+                  >Итоги и&nbsp;ретроспектива</span
+                >
+              </a>
+            </nav>
+
+            <div class="case-content">
+              <section class="case-section" id="context">
+                <h2 class="subheading case-section__label">Контекст</h2>
+
+                <div class="case-section__body">
+                  <div class="case-block">
+                    <h3 class="heading">Исходная точка</h3>
+                    <div class="case-prose">
+                      <p class="text">
+                        Библиотеку завели до&nbsp;меня, под&nbsp;один продукт.
+                        Мне&nbsp;достался плоский список переменных:
+                        по&nbsp;имени можно было понять цвет,
+                        но&nbsp;не&nbsp;его&nbsp;роль в&nbsp;интерфейсе.
+                        С&nbsp;весны 2026&nbsp;я&nbsp;целиком вела
+                        дизайн-систему&nbsp;— от&nbsp;архитектуры токенов
+                        до&nbsp;компонентов, спецификаций и&nbsp;синхронизации
+                        с&nbsp;кодом.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="case-block">
+                    <h3 class="heading">Моя&nbsp;роль и&nbsp;команда</h3>
+                    <div class="case-prose">
+                      <p class="text">
+                        Я&nbsp;в&nbsp;AskBefore ведущий продуктовый дизайнер
+                        и&nbsp;дизайн-инженер: проектирую интерфейсы
+                        и&nbsp;реализую их&nbsp;в&nbsp;коде.
+                      </p>
+                      <p class="text">
+                        Дизайнеров было двое. Я&nbsp;постоянно вела продукты
+                        и&nbsp;принимала решения по&nbsp;архитектуре библиотеки;
+                        вторая дизайнер подключалась парт-тайм
+                        и&nbsp;работала с&nbsp;готовыми правилами
+                        и&nbsp;компонентами. Код&nbsp;проекта пишут
+                        также&nbsp;разработчик и&nbsp;фаундер. Описанные
+                        решения выбирала и&nbsp;внедряла&nbsp;я.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="case-block">
+                    <h3 class="heading">Ограничения</h3>
+                    <div class="case-cards">
+                      <article class="case-card">
+                        <div class="case-card__header">
+                          <p class="text case-card__index">01</p>
+                          <h4 class="heading case-card__title">
+                            Figma Professional
+                          </h4>
+                        </div>
+                        <p class="text">
+                          в&nbsp;Figma стоял тариф Professional&nbsp;—
+                          без&nbsp;Extended Collections и&nbsp;Code Connect
+                        </p>
+                      </article>
+                      <article class="case-card">
+                        <div class="case-card__header">
+                          <p class="text case-card__index">02</p>
+                          <h4 class="heading case-card__title">
+                            Архитектура в&nbsp;соло
+                          </h4>
+                        </div>
+                        <p class="text">
+                          архитектурой я&nbsp;занималась одна, поэтому
+                          для&nbsp;каждого решения считала время
+                          на&nbsp;реализацию, и&nbsp;то, сколько работы
+                          оно&nbsp;добавит потом
+                        </p>
+                      </article>
+                      <article class="case-card">
+                        <div class="case-card__header">
+                          <p class="text case-card__index">03</p>
+                          <h4 class="heading case-card__title">
+                            Три&nbsp;продукта уже&nbsp;в&nbsp;проде
+                          </h4>
+                        </div>
+                        <p class="text">
+                          все&nbsp;три&nbsp;продукта уже&nbsp;работали
+                          в&nbsp;проде, библиотеку нужно было перестроить
+                          вместе с&nbsp;существующими интерфейсами
+                        </p>
+                      </article>
+                    </div>
+                  </div>
+                </div>
+              </section>
+
+              <section class="case-section" id="task">
+                <h2 class="subheading case-section__label">
+                  Проблема → задача
+                </h2>
+
+                <div class="case-section__body">
+                  <div class="case-block">
+                    <h3 class="heading">Что&nbsp;нужно было изменить</h3>
+                    <div class="case-cards">
+                      <article class="case-card">
+                        <div class="case-card__header">
+                          <p class="text case-card__index">01</p>
+                          <h4 class="heading case-card__title">
+                            Компонент знает, какому продукту принадлежит
+                          </h4>
+                        </div>
+                        <div class="case-prose">
+                          <p class="text">Токены:</p>
+                          <p class="text">
+                            дать трём продуктам свои акценты
+                            без&nbsp;трёх наборов компонентов
+                          </p>
+                        </div>
+                      </article>
+                      <article class="case-card">
+                        <div class="case-card__header">
+                          <p class="text case-card__index">02</p>
+                          <h4 class="heading case-card__title">
+                            Figma и&nbsp;код&nbsp;описывают разные компоненты
+                          </h4>
+                        </div>
+                        <div class="case-prose">
+                          <p class="text">Компоненты:</p>
+                          <p class="text">
+                            привести Figma в&nbsp;соответствие с&nbsp;кодом,
+                            чтобы&nbsp;новые экраны собирались
+                            из&nbsp;существующей библиотеки
+                          </p>
+                        </div>
+                      </article>
+                      <article class="case-card">
+                        <div class="case-card__header">
+                          <p class="text case-card__index">03</p>
+                          <h4 class="heading case-card__title">
+                            Правила использования живут в&nbsp;голове
+                            у&nbsp;дизайнера
+                          </h4>
+                        </div>
+                        <div class="case-prose">
+                          <p class="text">Спецификации:</p>
+                          <p class="text">
+                            записать правила, по&nbsp;которым компонентами
+                            смогут пользоваться без&nbsp;моего участия
+                          </p>
+                        </div>
+                      </article>
+                    </div>
+                  </div>
+                </div>
+              </section>
+
+              <section class="case-section" id="tokens">
+                <h2 class="subheading case-section__label">
+                  Токены: вынести продуктовый цвет из&nbsp;компонента
+                </h2>
+
+                <div class="case-section__body">
+                  <div class="case-block">
+                    <h3 class="heading">Откуда взялись три&nbsp;набора</h3>
+                    <div class="case-prose">
+                      <p class="text">
+                        У&nbsp;каждого продукта свой акцент: фиолетовый
+                        у&nbsp;сервиса обмена, зелёный у&nbsp;агрегатора,
+                        розовый у&nbsp;партнёрского портала. К&nbsp;весне
+                        2026&nbsp;все&nbsp;три&nbsp;уже&nbsp;работали
+                        в&nbsp;коде, а&nbsp;в&nbsp;библиотеке каждому акценту
+                        соответствовал свой набор вариантов.
+                      </p>
+                    </div>
+                  </div>
+
+                  <figure class="case-figure">
+                    <div class="case-figure__media case-figure__media--368">
+                      <img
+                        src="../assets/images/cases/ds/ds-1.webp"
+                        alt="Три цветовых набора одного компонента для продуктов AskBefore"
+                        width="3688"
+                        height="1472"
+                      />
+                    </div>
+                    <figcaption class="text case-figure__caption">
+                      Один компонент размножен в&nbsp;три&nbsp;цветовых набора
+                    </figcaption>
+                  </figure>
+
+                  <div class="case-prose">
+                    <p class="text">
+                      Компоненты напрямую обращались к&nbsp;переменным,
+                      названным по&nbsp;цвету. Чтобы&nbsp;дать кнопке другой
+                      продуктовый акцент, я&nbsp;добавляла
+                      ещё&nbsp;один вариант. Так&nbsp;библиотека росла вместе
+                      с&nbsp;числом продуктов.
+                    </p>
+                    <p class="text">
+                      В&nbsp;компоненте оказались связаны поведение
+                      и&nbsp;продуктовый цвет. Общую правку приходилось
+                      повторять в&nbsp;трёх наборах. Следующий продукт
+                      добавил&nbsp;бы&nbsp;четвёртый.
+                    </p>
+                  </div>
+
+                  <div class="case-block">
+                    <h3 class="heading">Как&nbsp;я&nbsp;собрала семантику</h3>
+                    <div class="case-prose">
+                      <p class="text">
+                        Я&nbsp;прошла по&nbsp;трём наборам и&nbsp;сопоставила,
+                        за&nbsp;что&nbsp;отвечает каждый цвет. У&nbsp;фона
+                        первичной кнопки одна роль&nbsp;— именно
+                        её&nbsp;я&nbsp;и&nbsp;вынесла в&nbsp;семантический
+                        токен. Так&nbsp;же&nbsp;разобрала остальные роли.
+                      </p>
+                      <p class="text">
+                        Дальше&nbsp;— два&nbsp;слоя: примитив хранит значение
+                        цвета, семантический токен описывает роль
+                        и&nbsp;ссылается на&nbsp;примитив. Компоненты
+                        привязала к&nbsp;семантике, прямые ссылки
+                        на&nbsp;примитивы исключила из&nbsp;правил.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="case-block">
+                    <h3 class="heading">
+                      Как&nbsp;теперь переключается продукт
+                    </h3>
+                    <div class="case-prose">
+                      <p class="text">
+                        Для&nbsp;каждого продукта я&nbsp;задала свой режим
+                        семантического слоя. В&nbsp;Figma это&nbsp;режимы
+                        коллекции, в&nbsp;коде&nbsp;— data-атрибут
+                        на&nbsp;обёртке продукта.
+                      </p>
+                      <p class="text">
+                        Компонент остаётся тем&nbsp;же. При&nbsp;смене режима
+                        он&nbsp;получает другие значения токенов:
+                        та&nbsp;же&nbsp;кнопка становится фиолетовой, зелёной
+                        или&nbsp;розовой. Вся&nbsp;библиотека
+                        для&nbsp;трёх продуктов при&nbsp;этом помещается
+                        в&nbsp;одном файле Figma.
+                      </p>
+                      <p class="text">
+                        Новый продукт — это ещё один режим семантики,
+                        компоненты не меняются. Тема живёт на слое примитивов:
+                        там меняются значения цветов, роли остаются прежними.
+                      </p>
+                    </div>
+                  </div>
+
+                  <figure class="case-figure">
+                    <div class="case-figure__media case-figure__media--400">
+                      <img
+                        src="../assets/images/cases/ds/ds-2.webp"
+                        alt="Один компонент в трёх режимах продуктового цвета"
+                        width="3688"
+                        height="1600"
+                      />
+                    </div>
+                    <figcaption class="text case-figure__caption">
+                      Один и тот же компонент получает разные значения цвета
+                      с помощью режима
+                    </figcaption>
+                  </figure>
+
+                  <div class="case-block">
+                    <h3 class="heading">
+                      Почему токенизирован только цвет
+                    </h3>
+                    <div class="case-prose">
+                      <p class="text">
+                        В&nbsp;системе 150&nbsp;цветовых токенов. Собственных
+                        токенов отступов и&nbsp;радиусов&nbsp;— ноль.
+                      </p>
+                      <p class="text">
+                        Продукт с&nbsp;самого начала построен на&nbsp;Tailwind,
+                        поэтому для&nbsp;отступов я&nbsp;оставила
+                        его&nbsp;шкалу. Свой словарь поверх
+                        неё&nbsp;добавил&nbsp;бы&nbsp;второе имя&nbsp;для&nbsp;того&nbsp;же&nbsp;значения.
+                        Поддерживать соответствие между&nbsp;ними
+                        тоже&nbsp;пришлось&nbsp;бы&nbsp;мне.
+                      </p>
+                      <p class="text">
+                        В Figma подключена библиотека с той же шкалой —
+                        переменные названы, как классы в коде, один словарь на
+                        макет и реализацию.
+                      </p>
+                      <p class="text">
+                        → → → Так&nbsp;я&nbsp;сознательно сохранила
+                        зависимость от&nbsp;Tailwind. Сценария ухода
+                        с&nbsp;него у&nbsp;нас&nbsp;нет.
+                        Если&nbsp;продукту понадобится своя плотность
+                        интерфейса, появится и причина завести собственные
+                        токены.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </section>
+
+              <section class="case-section" id="components">
+                <h2 class="subheading case-section__label">
+                  Компоненты: сверить Figma с&nbsp;тем, что&nbsp;уже&nbsp;работает
+                </h2>
+
+                <div class="case-section__body">
+                  <div class="case-block">
+                    <h3 class="heading">
+                      Где&nbsp;макет расходился с&nbsp;кодом
+                    </h3>
+                    <div class="case-prose">
+                      <p class="text">
+                        Часть компонентов существовала только в коде, у других
+                        в Figma отличались свойства или не хватало состояний.
+                        Пока макеты читали люди, это закрывалось разговором.
+                        После&nbsp;перехода на&nbsp;сборку через&nbsp;MCP макет
+                        стал читать агент. Он&nbsp;брал свойство
+                        из&nbsp;Figma, не&nbsp;находил такого в&nbsp;коде
+                        и&nbsp;создавал заново.
+                      </p>
+                      <p class="text">
+                        Оба&nbsp;описания компонента по&nbsp;отдельности
+                        выглядели рабочими. При&nbsp;сборке часто получался
+                        дубль.
+                      </p>
+                    </div>
+                  </div>
+
+                  <figure class="case-figure">
+                    <div class="case-figure__media case-figure__media--496">
+                      <img
+                        src="../assets/images/cases/ds/ds-3.webp"
+                        alt="Сравнение свойств компонента в Figma и React"
+                        width="3692"
+                        height="1984"
+                      />
+                    </div>
+                    <figcaption class="text case-figure__caption">
+                      Синхронизация свойств: Figma vs React
+                    </figcaption>
+                  </figure>
+
+                  <div class="case-block">
+                    <h3 class="heading">С&nbsp;чем&nbsp;я сверялась</h3>
+                    <div class="case-prose">
+                      <p class="text">
+                        За&nbsp;основу я&nbsp;взяла реализацию:
+                        эти&nbsp;компоненты уже&nbsp;работали
+                        в&nbsp;продукте. По&nbsp;ним&nbsp;и&nbsp;стала
+                        обновлять библиотеку в&nbsp;Figma.
+                      </p>
+                      <p class="text">
+                        Работала покомпонентно: читала код, проверяла свойства
+                        и&nbsp;состояния, затем приводила к&nbsp;ним&nbsp;макет.
+                        AI-агенты через&nbsp;Figma MCP помогали находить
+                        и&nbsp;подсвечивать расхождения.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="case-block">
+                    <h3 class="heading">
+                      Как&nbsp;связала компонент в&nbsp;Figma
+                      с&nbsp;компонентом в&nbsp;коде
+                    </h3>
+                    <div class="case-prose">
+                      <p class="text">
+                        Совпадения свойств оказалось недостаточно. Агенту
+                        всё&nbsp;ещё&nbsp;нужно было указать, какой компонент
+                        из&nbsp;кода соответствует конкретному узлу
+                        в&nbsp;Figma. Без&nbsp;этой связи он&nbsp;продолжал
+                        создавать дубли.
+                      </p>
+                      <p class="text">
+                        Для&nbsp;такой связи есть&nbsp;Code Connect,
+                        но&nbsp;на&nbsp;нашем тарифе он&nbsp;недоступен.
+                        Я&nbsp;спроектировала свой механизм&nbsp;—
+                        component-manifest.json в&nbsp;корне репозитория.
+                      </p>
+                    </div>
+                  </div>
+
+                  <figure class="case-figure">
+                    <div class="case-figure__media case-figure__media--496">
+                      <img
+                        src="../assets/images/cases/ds/ds-4.webp"
+                        alt="Фрагмент component-manifest.json с соответствием Figma и кода"
+                        width="3692"
+                        height="1984"
+                      />
+                    </div>
+                    <figcaption class="text case-figure__caption">
+                      Манифест соответствия (component-manifest.json)
+                    </figcaption>
+                  </figure>
+
+                  <div class="case-prose">
+                    <p class="text">
+                      В&nbsp;манифесте записано, какой компонент библиотеки
+                      соответствует компоненту в&nbsp;коде и&nbsp;как&nbsp;варианты
+                      Figma переводятся в&nbsp;его&nbsp;свойства. Файл
+                      версионируется вместе с&nbsp;кодом. В&nbsp;инструкциях
+                      я&nbsp;закрепила порядок: до&nbsp;генерации разметки
+                      агент читает манифест и&nbsp;импортирует существующие
+                      компоненты.
+                    </p>
+                    <p class="text">
+                      Манифест стал ещё&nbsp;и&nbsp;способом проверять полноту
+                      библиотеки. Если&nbsp;запись не&nbsp;заполнена, значит,
+                      между&nbsp;Figma и&nbsp;кодом чего‑то не&nbsp;хватает:
+                      самого компонента, свойства или&nbsp;соответствия
+                      между&nbsp;ними.
+                    </p>
+                    <p class="text">
+                      По статусам записей видно, где Figma и код совпадают, а
+                      где чего-то не хватает — самого компонента, свойства или
+                      соответствия между ними. Отдельный статус
+                      я&nbsp;завела для&nbsp;компонентов, которые
+                      есть&nbsp;в&nbsp;коде, но&nbsp;пока
+                      не&nbsp;появились в&nbsp;Figma. Фронт регулярно писался
+                      раньше дизайна.
+                    </p>
+                  </div>
+
+                  <div class="case-block">
+                    <h3 class="heading">
+                      Как&nbsp;поддерживается соответствие
+                    </h3>
+                    <div class="case-prose">
+                      <p class="text">
+                        Если&nbsp;переименовать компонент или&nbsp;его&nbsp;свойство
+                        и&nbsp;не&nbsp;обновить соответствие, сборка
+                        не&nbsp;проходит. Расхождение становится видно сразу.
+                      </p>
+                      <p class="text">
+                        Для&nbsp;новых компонентов в&nbsp;команде закрепили
+                        правило: запись в&nbsp;манифесте появляется вместе
+                        с&nbsp;компонентом. Я&nbsp;задала формат
+                        и&nbsp;правила, а&nbsp;дальше запись может
+                        поддерживать тот, кто&nbsp;пишет&nbsp;код.
+                      </p>
+                      <p class="text">
+                        Сейчас в&nbsp;манифесте 48&nbsp;записей.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </section>
+
+              <section class="case-section" id="specs">
+                <h2 class="subheading case-section__label">
+                  Спецификации: записать то, что&nbsp;я&nbsp;объясняла сама
+                </h2>
+
+                <div class="case-section__body">
+                  <div class="case-block">
+                    <h3 class="heading">
+                      Чего&nbsp;не&nbsp;видно по&nbsp;компоненту
+                    </h3>
+                    <div class="case-prose">
+                      <p class="text">
+                        По&nbsp;компоненту в&nbsp;библиотеке можно понять
+                        его&nbsp;устройство. Но&nbsp;из&nbsp;него
+                        не&nbsp;всегда понятно, когда его&nbsp;использовать,
+                        какое состояние выбрать и&nbsp;как&nbsp;он должен себя
+                        вести.
+                      </p>
+                      <p class="text">
+                        Пока экраны собирала я&nbsp;сама, эти&nbsp;правила
+                        оставались у&nbsp;меня в&nbsp;голове. Когда
+                        подключились другие, понадобилось записать
+                        их&nbsp;так, чтобы&nbsp;за&nbsp;пояснениями
+                        не&nbsp;приходили ко&nbsp;мне.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="case-block">
+                    <h3 class="heading">Где&nbsp;я&nbsp;разместила правила</h3>
+                    <div class="case-prose">
+                      <p class="text">
+                        Я&nbsp;написала спецификации и&nbsp;разместила
+                        их&nbsp;внутри компонентов в&nbsp;Figma.
+                        Это&nbsp;важно для&nbsp;работы через&nbsp;MCP: агент
+                        получает описание вместе со&nbsp;структурой
+                        компонента, за&nbsp;одно обращение.
+                      </p>
+                      <p class="text">
+                        У&nbsp;всех спецификаций одна структура: Description →
+                        разбор каждого пропа → Do’s &amp; Don’ts.
+                        По&nbsp;ней&nbsp;дизайнер выбирает компонент
+                        для&nbsp;экрана, разработчик проверяет поведение,
+                        а&nbsp;агент получает правила для&nbsp;сборки.
+                      </p>
+                      <p class="text">
+                        В&nbsp;репозитории те&nbsp;же&nbsp;знания разложены
+                        по&nbsp;трём разделам: общие правила дизайн-системы,
+                        инструкции для&nbsp;агента и&nbsp;спецификации
+                        компонентов.
+                      </p>
+                    </div>
+                  </div>
+
+                  <figure class="case-figure">
+                    <div class="case-figure__media case-figure__media--680">
+                      <img
+                        src="../assets/images/cases/ds/ds-5.webp"
+                        alt="Спецификация компонента в Figma и Storybook"
+                        width="3692"
+                        height="2720"
+                      />
+                    </div>
+                    <figcaption class="text case-figure__caption">
+                      Спецификация компонента в Figma и Storybook
+                    </figcaption>
+                  </figure>
+                </div>
+              </section>
+
+              <section class="case-section case-section--last" id="results">
+                <h2 class="subheading case-section__label">
+                  Итоги и&nbsp;ретроспектива
+                </h2>
+
+                <div class="case-section__body">
+                  <div class="case-block">
+                    <h3 class="heading">Что&nbsp;получилось</h3>
+                    <div class="case-metrics">
+                      <article class="case-metric case-metric--primary">
+                        <p class="number case-metric__value">43</p>
+                        <p class="text">
+                          опубликованных компонента
+                          в&nbsp;продакшн-библиотеке
+                        </p>
+                      </article>
+                      <article class="case-metric case-metric--secondary">
+                        <p class="number case-metric__value">1</p>
+                        <p class="text">
+                          набор компонентов и&nbsp;файл в&nbsp;Figma
+                        </p>
+                      </article>
+                      <article class="case-metric case-metric--tertiary">
+                        <p class="number case-metric__value">3</p>
+                        <p class="text">
+                          продуктовые поверхности на&nbsp;одной системе
+                        </p>
+                      </article>
+                    </div>
+                  </div>
+
+                  <div class="case-prose">
+                    <p class="text">
+                      Система работает в&nbsp;проде на&nbsp;трёх продуктовых
+                      поверхностях. В&nbsp;библиотеке
+                      43&nbsp;опубликованных компонента.
+                    </p>
+                    <p class="text">
+                      Три&nbsp;цветовых набора я&nbsp;свела в&nbsp;один.
+                      Теперь продуктовый акцент задаётся режимом
+                      семантической коллекции. Для&nbsp;нового портала
+                      не&nbsp;нужна отдельная копия библиотеки.
+                    </p>
+                    <p class="text">
+                      Систему построила я, а собирают на ней экраны и
+                      прототипы уже и другие члены команды. Заданные мной
+                      правила токенов и&nbsp;компонентов при&nbsp;этих
+                      изменениях сохранились&nbsp;— новые реализации вошли
+                      в&nbsp;ту&nbsp;же&nbsp;структуру.
+                    </p>
+                  </div>
+
+                  <div class="case-block">
+                    <h3 class="heading">Что&nbsp;сделала&nbsp;бы&nbsp;иначе</h3>
+                    <div class="case-prose">
+                      <p class="text">
+                        Я&nbsp;бы&nbsp;разделила примитивы и&nbsp;семантику,
+                        как&nbsp;только стало понятно, что&nbsp;продуктовых
+                        акцентов будет больше одного.
+                      </p>
+                      <p class="text">
+                        Плоскую библиотеку начали собирать до&nbsp;меня
+                        под&nbsp;один продукт. Но&nbsp;партнёрский портал
+                        и&nbsp;агрегатор на&nbsp;ней&nbsp;строила уже&nbsp;я:
+                        для&nbsp;каждого нового акцента добавляла варианты
+                        компонентов. К&nbsp;весне у&nbsp;меня было
+                        три&nbsp;набора, которые потом пришлось сводить
+                        в&nbsp;один.
+                      </p>
+                      <p class="text">
+                        Разводить примитивы и&nbsp;роли надо&nbsp;было
+                        в&nbsp;тот&nbsp;момент, когда стало понятно,
+                        что&nbsp;продуктовых акцентов будет больше одного,
+                        — тогда&nbsp;новые продукты собирались&nbsp;бы&nbsp;на&nbsp;общей
+                        библиотеке и&nbsp;не&nbsp;пришлось&nbsp;бы&nbsp;переводить
+                        на&nbsp;неё&nbsp;уже работающие интерфейсы.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+            </div>
+          </div>
+
+          <nav class="case-nav" aria-label="Навигация по кейсам">
+            <a class="link case-nav__all" href="../">Все&nbsp;кейсы</a>
+            <a class="link case-nav__next" href="b2c.html">
+              AskBefore: как&nbsp;упростить путь к&nbsp;тестированию
+              и&nbsp;обмену результатами
+            </a>
+          </nav>
+        </main>
+
+        <footer class="footer">
+          <p class="heading footer__credit">
+            Ксения Шевелёва
+            <span class="subheading footer__role"
+              >| Product Designer &amp;&nbsp;Design Engineer</span
+            >
+          </p>
+          <p class="text footer__copy">© 2026</p>
+        </footer>
+      </div>
+    </div>
+
+    <script src="../js/main.js"></script>
+  </body>
+</html>
