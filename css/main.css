@@ -706,6 +706,16 @@ body {
   padding-left: 24px;
 }
 
+.case-metric--quaternary {
+  grid-column: 2;
+  grid-row: 1;
+  padding-left: 24px;
+}
+
+.case-metrics:has(.case-metric--quaternary)::before {
+  content: none;
+}
+
 .case-nav {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -888,7 +898,7 @@ body {
   }
 
   .case-main {
-    gap: 48px;
+    gap: 64px;
   }
 
   .case-hero__heading {
@@ -967,7 +977,8 @@ body {
 
   .case-metric--primary,
   .case-metric--secondary,
-  .case-metric--tertiary {
+  .case-metric--tertiary,
+  .case-metric--quaternary {
     grid-column: unset;
     grid-row: unset;
     padding-inline: 0;
@@ -976,7 +987,8 @@ body {
   }
 
   .case-metric--secondary,
-  .case-metric--tertiary {
+  .case-metric--tertiary,
+  .case-metric--quaternary {
     border-top: none;
   }
 

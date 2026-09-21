@@ -1,1 +1,1100 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      AskBefore: как упростить путь к тестированию и обмену результатами —
+      Ксения Шевелёва
+    </title>
+    <meta
+      name="description"
+      content="Кейс: два B2C-продукта AskBefore — карта клиник и защищённый обмен результатами. Сценарии, приватность и связь между независимыми продуктами."
+    />
+    <link rel="icon" href="../assets/favicon.ico" sizes="any" />
+    <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="../assets/apple-touch-icon.png" />
+    <link
+      rel="icon"
+      href="../assets/icon-512.png"
+      type="image/png"
+      sizes="512x512"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/tokens.css" />
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="../css/typography.css" />
+    <link rel="stylesheet" href="../css/main.css" />
+  </head>
+  <body>
+    <div class="page">
+      <header class="header">
+        <div class="limiter header__inner">
+          <a class="header__brand" href="../" aria-label="На главную">
+            <span class="header__logo">
+              <img
+                src="../assets/images/logo.svg"
+                width="32"
+                height="40"
+                alt=""
+              />
+            </span>
+          </a>
 
+          <nav class="header__nav" aria-label="Основная навигация">
+            <div class="header__links">
+              <a class="link header__link" href="#">CV</a>
+              <a class="link header__link" href="#">Telegram</a>
+              <a class="link header__link" href="#">Linkedin</a>
+            </div>
+            <p class="text header__lang" aria-label="Язык">
+              <span aria-current="true">Ru</span>|<a href="../en/">Eng</a>
+            </p>
+          </nav>
+        </div>
+      </header>
+
+      <div class="main">
+        <main class="main__content case-page">
+          <div class="case-main">
+            <div class="case-hero">
+              <a class="link case-hero__back" href="../">Все&nbsp;кейсы</a>
+
+              <div class="case-hero__heading">
+                <h1 class="heading case-hero__title">
+                  AskBefore: как&nbsp;упростить путь к&nbsp;тестированию
+                  и&nbsp;обмену результатами
+                </h1>
+                <p class="text case-hero__date">фев. 2026&nbsp;— авг. 2026</p>
+              </div>
+
+              <div class="case-hero__cover">
+                <img
+                  src="../assets/images/cases/b2c/cover.webp"
+                  alt="Путь создания папки обмена: было 7 шагов, стало 3"
+                  width="923"
+                  height="680"
+                />
+              </div>
+
+              <div class="case-hero__meta">
+                <p class="text">MVP →&nbsp;MLP</p>
+                <p class="text">Steps to Conversion&nbsp;-57%</p>
+                <div class="case-hero__meta-end">
+                  <p class="text">B2C</p>
+                  <p class="text">Web + mobile app</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="case-body">
+              <nav class="case-toc" aria-label="Содержание кейса" data-case-toc>
+                <a class="case-toc__item is-active" href="#context">
+                  <span class="text case-toc__num">01</span>
+                  <span class="text case-toc__label">Контекст</span>
+                </a>
+                <a class="case-toc__item" href="#exchange">
+                  <span class="text case-toc__num">02</span>
+                  <span class="text case-toc__label">Обмен</span>
+                </a>
+                <a class="case-toc__item" href="#aggregator">
+                  <span class="text case-toc__num">03</span>
+                  <span class="text case-toc__label">Агрегатор</span>
+                </a>
+                <a class="case-toc__item" href="#order">
+                  <span class="text case-toc__num">04</span>
+                  <span class="text case-toc__label">Заказ</span>
+                </a>
+                <a class="case-toc__item" href="#entry">
+                  <span class="text case-toc__num">05</span>
+                  <span class="text case-toc__label"
+                    >Два&nbsp;продукта — один&nbsp;вход</span
+                  >
+                </a>
+                <a class="case-toc__item" href="#results">
+                  <span class="text case-toc__num">06</span>
+                  <span class="text case-toc__label"
+                    >Итоги и&nbsp;ретроспектива</span
+                  >
+                </a>
+              </nav>
+
+              <div class="case-content">
+                <section class="case-section" id="context">
+                  <h2 class="subheading case-section__label">Контекст</h2>
+
+                  <div class="case-section__body">
+                    <div class="case-prose">
+                      <p class="text">
+                        Обмен&nbsp;результатами&nbsp;— продукт, которого
+                        у&nbsp;людей раньше не&nbsp;было. Сравнить
+                        не&nbsp;с&nbsp;чем: нет&nbsp;привычной сущности,
+                        нет&nbsp;знакомого паттерна. На&nbsp;тестировании
+                        человек открывал экран и&nbsp;не&nbsp;понимал, где
+                        он&nbsp;находится и&nbsp;что&nbsp;от&nbsp;него хотят.
+                      </p>
+                      <p class="text">
+                        Обмен&nbsp;я&nbsp;сделала понятнее и&nbsp;короче,
+                        агрегатор&nbsp;— предсказуемее в&nbsp;выборе,
+                        а&nbsp;сам&nbsp;сценарий обмена увела с&nbsp;носителя,
+                        на&nbsp;котором он&nbsp;ломался.
+                      </p>
+                    </div>
+
+                    <div class="case-block">
+                      <h3 class="heading">
+                        Два&nbsp;продукта, один&nbsp;человек в&nbsp;тревоге
+                      </h3>
+                      <div class="case-prose">
+                        <p class="text">
+                          На&nbsp;пользователя работают два&nbsp;продукта,
+                          и&nbsp;друг о&nbsp;друге они&nbsp;не&nbsp;знают.
+                          Можно год пользоваться одним и&nbsp;ни&nbsp;разу
+                          не&nbsp;открыть второй.
+                        </p>
+                        <p class="text">
+                          Оба&nbsp;продукта живут в&nbsp;одном домене&nbsp;—
+                          тестирование на&nbsp;ЗППП. Человек приходит сюда
+                          в&nbsp;тревоге и&nbsp;это&nbsp;рамка всех решений:
+                          цена ошибки в&nbsp;интерфейсе измеряется
+                          не&nbsp;«неудобно», а&nbsp;тем, что&nbsp;человек
+                          теряет контроль над&nbsp;своими медицинскими данными.
+                        </p>
+                      </div>
+                    </div>
+
+                    <div class="case-cards">
+                      <article class="case-card">
+                        <div class="case-card__header">
+                          <p class="text case-card__index">01</p>
+                          <h4 class="heading case-card__title">
+                            Агрегатор — где&nbsp;сдать
+                          </h4>
+                        </div>
+                        <p class="text">
+                          карта партнёров, тесты, цены, время, бронирование
+                        </p>
+                      </article>
+                      <article class="case-card">
+                        <div class="case-card__header">
+                          <p class="text case-card__index">02</p>
+                          <h4 class="heading case-card__title">
+                            Обмен — как&nbsp;показать
+                          </h4>
+                        </div>
+                        <p class="text">
+                          папка с&nbsp;результатами, ключ, отправка партнёру
+                        </p>
+                      </article>
+                    </div>
+
+                    <div class="case-block">
+                      <h3 class="heading">Что&nbsp;было до&nbsp;меня</h3>
+                      <div class="case-prose">
+                        <p class="text">
+                          У&nbsp;обмена уже&nbsp;был MVP. Первую версию
+                          агрегатора проектировала другая дизайнер в&nbsp;команде.
+                        </p>
+                        <p class="text">
+                          Я&nbsp;продолжила работу над&nbsp;обоими продуктами:
+                          проектировала сценарии и&nbsp;интерфейсы,
+                          реализовывала их&nbsp;на&nbsp;фронтенде. Продуктовые
+                          решения проходили ревью у&nbsp;основательницы&nbsp;—
+                          раньше она&nbsp;работала senior-дизайнером
+                          и&nbsp;дизайн-лидом.
+                        </p>
+                      </div>
+                    </div>
+
+                    <div class="case-block">
+                      <h3 class="heading">Моя&nbsp;роль</h3>
+                      <div class="case-prose">
+                        <p class="text">
+                          Я&nbsp;работала как&nbsp;дизайнер
+                          и&nbsp;дизайн-инженер: проектировала интерфейс
+                          и&nbsp;сама доводила его&nbsp;до&nbsp;кода.
+                          В&nbsp;обмене это&nbsp;позволило проверить новый путь
+                          прямо внутри продукта. В&nbsp;агрегаторе&nbsp;—
+                          не&nbsp;только изменить экраны, но&nbsp;и&nbsp;связать
+                          общие данные между&nbsp;ними.
+                        </p>
+                      </div>
+                    </div>
+
+                    <div class="case-block">
+                      <h3 class="heading">С&nbsp;чем пришлось считаться</h3>
+                      <div class="case-cards">
+                        <article class="case-card">
+                          <div class="case-card__header">
+                            <p class="text case-card__index">01</p>
+                            <h4 class="heading case-card__title">
+                              Чувствительность данных
+                            </h4>
+                          </div>
+                          <p class="text">
+                            Соответствия закону недостаточно, чтобы принять
+                            решения о&nbsp;приватности&nbsp;— нужно было
+                            учитывать стигму, страх раскрытия данных
+                            и&nbsp;ожидания анонимности
+                          </p>
+                        </article>
+                        <article class="case-card">
+                          <div class="case-card__header">
+                            <p class="text case-card__index">02</p>
+                            <h4 class="heading case-card__title">
+                              Юридические требования
+                            </h4>
+                          </div>
+                          <p class="text">
+                            Принимала продуктовые решения с&nbsp;учётом того,
+                            какие данные можно собирать и&nbsp;хранить,
+                            на&nbsp;каких основаниях их&nbsp;использовать
+                            и&nbsp;какие меры защиты необходимы
+                          </p>
+                        </article>
+                        <article class="case-card">
+                          <div class="case-card__header">
+                            <p class="text case-card__index">03</p>
+                            <h4 class="heading case-card__title">
+                              Легаси и&nbsp;чужой код
+                            </h4>
+                          </div>
+                          <p class="text">
+                            Оба&nbsp;продукта уже&nbsp;работали в&nbsp;проде,
+                            я&nbsp;меняла их&nbsp;внутри существующего кода,
+                            а&nbsp;не&nbsp;собирала заново
+                          </p>
+                        </article>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+
+                <section class="case-section" id="exchange">
+                  <h2 class="subheading case-section__label">
+                    1.&nbsp;Обмен: объяснить незнакомый сценарий
+                  </h2>
+
+                  <div class="case-section__body">
+                    <div class="case-prose">
+                      <p class="text">
+                        В&nbsp;агрегаторе можно опереться на&nbsp;знакомые
+                        паттерны: карту, каталог, корзину. В&nbsp;обмене
+                        предстояло объяснить саму механику&nbsp;— зачем нужна
+                        папка, кто&nbsp;запрашивает результаты и&nbsp;что
+                        увидит получатель. Поэтому вся&nbsp;работа здесь
+                        свелась к&nbsp;одному вопросу: как&nbsp;сделать
+                        понятным то, чего человек раньше не&nbsp;видел.
+                      </p>
+                    </div>
+
+                    <div class="case-block">
+                      <h3 class="heading">
+                        При&nbsp;конфликте выигрывает лёгкость
+                      </h3>
+                      <div class="case-prose">
+                        <p class="text">
+                          На&nbsp;тестировании участникам было непонятно, куда
+                          они&nbsp;попали, кто&nbsp;запрашивает результаты
+                          и&nbsp;что&nbsp;делать дальше.
+                        </p>
+                        <p class="text">
+                          Фидбэк мы&nbsp;разбирали командой через Opportunity
+                          Solution Tree: от&nbsp;реплики в&nbsp;интервью&nbsp;—
+                          к&nbsp;находке, изменению и&nbsp;эксперименту
+                          для&nbsp;его&nbsp;проверки. Изменения
+                          приоритизировали по&nbsp;RICE. Я&nbsp;просмотрела
+                          все&nbsp;записи, разметила реплики и&nbsp;собрала
+                          материалы спринта вместе с&nbsp;экранами продукта
+                          в&nbsp;одном файле.
+                        </p>
+                        <p class="text">
+                          Оси&nbsp;оценки мы&nbsp;продумали
+                          с&nbsp;основательницей, а&nbsp;баллы выставляли
+                          командой. Пять&nbsp;осей описывали удобство,
+                          ещё&nbsp;две&nbsp;— тон: как&nbsp;продукт объясняет
+                          безопасность и&nbsp;насколько по-человечески
+                          разговаривает. Это&nbsp;была рабочая шкала
+                          для&nbsp;разбора, не&nbsp;продуктовая метрика.
+                        </p>
+                        <p class="text">
+                          Самые низкие оценки получили «просто»
+                          и&nbsp;«душевно». В&nbsp;решениях они&nbsp;иногда
+                          конфликтовали: дополнительное объяснение
+                          или&nbsp;оформление поддерживало человека,
+                          но&nbsp;одновременно требовало его&nbsp;внимания.
+                        </p>
+                        <p class="text">
+                          Принцип мы&nbsp;выбрали такой: там, где&nbsp;они
+                          конфликтуют, выигрывает лёгкость. Забота
+                          о&nbsp;пользователе здесь прежде всего в&nbsp;том,
+                          чтобы путь был короче, а&nbsp;не&nbsp;теплее.
+                          Душевность оставили там, где&nbsp;она не&nbsp;стоит
+                          шагов: обновили устаревшие иллюстрации, завели
+                          онбординги на&nbsp;каждую часть продукта
+                          и&nbsp;оставили возможность вернуться
+                          в&nbsp;онбординг в&nbsp;любой момент.
+                        </p>
+                      </div>
+                    </div>
+
+                    <figure class="case-figure">
+                      <div class="case-figure__media case-figure__media--496">
+                        <img
+                          src="../assets/images/placeholder.webp"
+                          alt="Рубрика оценки по семи осям: провалы подсвечены, оси «душевно» и «просто»"
+                          width="3692"
+                          height="1984"
+                        />
+                      </div>
+                      <figcaption class="text case-figure__caption">
+                        Рубрика оценки: 7&nbsp;осей, провалы подсвечены;
+                        «душевно →&nbsp;добавить / просто →&nbsp;убрать»
+                      </figcaption>
+                    </figure>
+
+                    <div class="case-block">
+                      <h3 class="heading">
+                        Сначала создать папку, потом наполнить
+                      </h3>
+                      <div class="case-prose">
+                        <p class="text">
+                          Раньше до&nbsp;создания папки нужно было пройти
+                          семь&nbsp;шагов: начать создание, придумать ключ,
+                          подтвердить его&nbsp;сохранение, загрузить
+                          результаты, выбрать тесты для&nbsp;запроса, решить
+                          про&nbsp;оформление и&nbsp;проверить всё перед
+                          нажатием «Создать».
+                        </p>
+                        <p class="text">
+                          Стало три: создать, придумать ключ, сохранить его.
+                          Дальше папка уже&nbsp;существует&nbsp;— можно
+                          посмотреть превью, показать QR или&nbsp;вернуться
+                          к&nbsp;ней позже.
+                        </p>
+                        <p class="text">
+                          Изменился момент создания, а&nbsp;не&nbsp;набор
+                          функций. Раньше человек должен был сначала пройти
+                          все&nbsp;решения о&nbsp;содержимом. Теперь загрузка
+                          результатов, запрос к&nbsp;другому человеку
+                          и&nbsp;оформление стали редактированием папки.
+                          Их&nbsp;можно выполнять в&nbsp;любом порядке.
+                        </p>
+                        <p class="text">
+                          Здесь&nbsp;же виден предыдущий принцип.
+                          Оформление&nbsp;— это&nbsp;душевность, и&nbsp;раньше
+                          про&nbsp;него спрашивали отдельным шагом
+                          на&nbsp;основном пути. Теперь этого вопроса нет:
+                          оформить папку можно всегда, но&nbsp;шага это
+                          не&nbsp;стоит.
+                        </p>
+                        <p class="text">
+                          Ни&nbsp;одной функции я&nbsp;не&nbsp;убрала. Убрала
+                          требование пройти их&nbsp;все подряд, чтобы получить
+                          результат.
+                        </p>
+                      </div>
+                    </div>
+
+                    <figure class="case-figure">
+                      <div class="case-figure__media case-figure__media--400">
+                        <img
+                          src="../assets/images/placeholder.webp"
+                          alt="Два ряда шагов: старый путь из семи шагов и новый из трёх"
+                          width="3688"
+                          height="1600"
+                        />
+                      </div>
+                      <figcaption class="text case-figure__caption">
+                        Два&nbsp;ряда шагов друг под&nbsp;другом:
+                        7&nbsp;шагов →&nbsp;3&nbsp;шага
+                      </figcaption>
+                    </figure>
+
+                    <div class="case-block">
+                      <h3 class="heading">
+                        Проверяли на&nbsp;рабочем прототипе
+                      </h3>
+                      <div class="case-prose">
+                        <p class="text">
+                          Прототип я&nbsp;собрала сразу в&nbsp;коде, внутри
+                          продукта. Это&nbsp;была черновая реализация
+                          без&nbsp;готовых компонентов: на&nbsp;этом этапе
+                          проверяли последовательность действий,
+                          а&nbsp;не&nbsp;финальный UI.
+                        </p>
+                        <p class="text">
+                          Причина в&nbsp;том, что&nbsp;мы&nbsp;чинили
+                          понятность. В&nbsp;макете человек смотрит,
+                          в&nbsp;кликабельном прототипе&nbsp;— действует,
+                          и&nbsp;промах виден только во&nbsp;втором случае.
+                        </p>
+                        <p class="text">
+                          Мы&nbsp;пригласили участницу, у&nbsp;которой
+                          на&nbsp;предыдущем тестировании было больше всего
+                          сложностей, и&nbsp;провели её&nbsp;по&nbsp;новому
+                          пути.
+                        </p>
+                        <p class="text">
+                          Один&nbsp;человек&nbsp;— не&nbsp;выборка,
+                          это&nbsp;проверка на&nbsp;худшем случае: если путь
+                          не&nbsp;работает у&nbsp;неё, дальше разговаривать
+                          не&nbsp;о&nbsp;чем.
+                        </p>
+                      </div>
+                    </div>
+
+                    <figure class="case-figure">
+                      <div class="case-figure__media case-figure__media--496">
+                        <img
+                          src="../assets/images/placeholder.webp"
+                          alt="Сырой прототип в коде и цепочка прогон — правка — повторный прогон"
+                          width="3692"
+                          height="1984"
+                        />
+                      </div>
+                      <figcaption class="text case-figure__caption">
+                        Сырой прототип в&nbsp;коде и&nbsp;цепочка
+                        «прогон →&nbsp;правка →&nbsp;повторный прогон»
+                      </figcaption>
+                    </figure>
+
+                    <div class="case-block">
+                      <h3 class="heading">
+                        Десктоп оказался не&nbsp;тем носителем
+                      </h3>
+                      <div class="case-prose">
+                        <p class="text">
+                          Из&nbsp;этих прогонов вырос вывод, которого
+                          в&nbsp;задаче не&nbsp;было: обмен нужно переносить
+                          в&nbsp;мобильное приложение.
+                        </p>
+                        <p class="text">
+                          Первая причина&nbsp;— паттерн. Обмен
+                          результатами&nbsp;— это&nbsp;разговор двух людей,
+                          и&nbsp;телефон подходит для&nbsp;такого обмена:
+                          показать и&nbsp;отсканировать QR-код, посмотреть
+                          результаты.
+                        </p>
+                        <p class="text">
+                          Вторая&nbsp;— возможности ограничить захват экрана.
+                          Человек показывает другому свои медицинские
+                          документы, и&nbsp;в&nbsp;вебе с&nbsp;этим сделать
+                          нельзя ничего. В&nbsp;нативном приложении механизм
+                          есть. Полностью проблему он&nbsp;не&nbsp;закрывает,
+                          но&nbsp;разница между «невозможно»
+                          и&nbsp;«неудобно» здесь важна.
+                        </p>
+                        <p class="text">
+                          Приложение сейчас в&nbsp;разработке, ведёт его
+                          вторая дизайнер. Я&nbsp;задала принцип переноса
+                          и&nbsp;отдала гайдлайны, флоу раскладывала она.
+                          Я&nbsp;вела регулярное ревью&nbsp;— отдельно ошибки
+                          в&nbsp;логике, отдельно в&nbsp;мобильной
+                          специфике&nbsp;— и&nbsp;подключалась
+                          к&nbsp;проектированию в&nbsp;сложных местах.
+                        </p>
+                      </div>
+                    </div>
+
+                    <figure class="case-figure">
+                      <div class="case-figure__media case-figure__media--368">
+                        <img
+                          src="../assets/images/placeholder.webp"
+                          alt="Перенос обмена из веба в нативное приложение: две причины"
+                          width="3688"
+                          height="1472"
+                        />
+                      </div>
+                      <figcaption class="text case-figure__caption">
+                        Веб →&nbsp;нативное приложение: две&nbsp;причины
+                      </figcaption>
+                    </figure>
+                  </div>
+                </section>
+
+                <section class="case-section" id="aggregator">
+                  <h2 class="subheading case-section__label">
+                    2.&nbsp;Агрегатор: навести порядок в&nbsp;выборе
+                  </h2>
+
+                  <div class="case-section__body">
+                    <div class="case-prose">
+                      <p class="text">
+                        В&nbsp;первой версии агрегатора уже&nbsp;были анализы,
+                        пакеты и&nbsp;партнёры на&nbsp;карте. Я&nbsp;продолжила
+                        работу, когда появились новые условия выбора.
+                        Их&nbsp;нужно было встроить так, чтобы каталог
+                        не&nbsp;превращался в&nbsp;один длинный список всего
+                        доступного.
+                      </p>
+                    </div>
+
+                    <div class="case-block">
+                      <h3 class="heading">
+                        Каталог&nbsp;— что&nbsp;сдать, фильтры&nbsp;— где
+                        и&nbsp;на&nbsp;каких условиях
+                      </h3>
+                      <div class="case-prose">
+                        <p class="text">
+                          Фильтры лежали там&nbsp;же, где&nbsp;тесты
+                          и&nbsp;пакеты,&nbsp;— одним общим блоком выбора
+                          под&nbsp;заголовком «Filters». Картинка
+                          не&nbsp;складывалась ни&nbsp;у&nbsp;команды,
+                          ни&nbsp;у&nbsp;пользователя: непонятно, что&nbsp;здесь
+                          предмет выбора, а&nbsp;что&nbsp;его уточнение.
+                        </p>
+                        <p class="text">
+                          Я&nbsp;развела их&nbsp;по&nbsp;тому, чем&nbsp;они
+                          являются. Тесты и&nbsp;пакеты&nbsp;— это&nbsp;каталог:
+                          позиции, которые человек берёт. Фильтры&nbsp;—
+                          атрибуты уже&nbsp;выбранных позиций: не&nbsp;что
+                          он&nbsp;берёт, а&nbsp;чем один вариант отличается
+                          от&nbsp;другого.
+                        </p>
+                        <p class="text">
+                          Каталог оставила в&nbsp;боковой колонке, фильтры
+                          ушли наверх, строкой над&nbsp;картой. Видно
+                          и&nbsp;по&nbsp;заголовку&nbsp;— колонка «Filters»
+                          стала «Find a&nbsp;test».
+                        </p>
+                        <p class="text">
+                          Это&nbsp;дало правило для&nbsp;следующих изменений:
+                          новый анализ попадает в&nbsp;каталог, новое условие
+                          поиска&nbsp;— в&nbsp;фильтры. Разделение зависит
+                          от&nbsp;роли элемента, а&nbsp;не&nbsp;от&nbsp;того,
+                          куда его&nbsp;удобнее поместить на&nbsp;текущем
+                          экране.
+                        </p>
+                      </div>
+                    </div>
+
+                    <figure class="case-figure">
+                      <div class="case-figure__media case-figure__media--496">
+                        <img
+                          src="../assets/images/placeholder.webp"
+                          alt="Два экрана агрегатора до и после: каталог и фильтры разведены"
+                          width="3692"
+                          height="1984"
+                        />
+                      </div>
+                      <figcaption class="text case-figure__caption">
+                        Два&nbsp;экрана до/после: каталог и&nbsp;фильтры
+                        разведены
+                      </figcaption>
+                    </figure>
+
+                    <div class="case-block">
+                      <h3 class="heading">
+                        Наполнение выросло из&nbsp;того, что&nbsp;партнёры
+                        реально делают
+                      </h3>
+                      <div class="case-prose">
+                        <p class="text">
+                          Переговоры с&nbsp;партнёрами вела основательница.
+                          Она&nbsp;приносила данные о&nbsp;том, чем отличаются
+                          их&nbsp;предложения. Я&nbsp;определяла, какие
+                          различия становятся фильтрами, где&nbsp;они находятся
+                          и&nbsp;как&nbsp;называются в&nbsp;интерфейсе.
+                        </p>
+                        <p class="text">
+                          Например, один анализ мог выполняться разными
+                          методами, с&nbsp;разной ценой и&nbsp;сроком
+                          готовности. Так&nbsp;появился фильтр по&nbsp;методу&nbsp;—
+                          базовое или&nbsp;расширенное тестирование. Рядом
+                          добавились ценовой диапазон и&nbsp;выбор даты
+                          и&nbsp;времени.
+                        </p>
+                        <p class="text">
+                          С&nbsp;пакетами нужно было отдельно разобраться
+                          в&nbsp;составе и&nbsp;в&nbsp;том, как&nbsp;они
+                          связаны между&nbsp;экранами.
+                        </p>
+                        <p class="text">
+                          Первый набор появился как&nbsp;маркетинговая
+                          гипотеза&nbsp;— по&nbsp;ситуациям, в&nbsp;которых
+                          человек может захотеть сдать анализы. После
+                          обсуждения с&nbsp;клиникой состав пересмотрели:
+                          партнёр объединял анализы по&nbsp;другой логике.
+                        </p>
+                        <p class="text">
+                          При&nbsp;этом пакет на&nbsp;карте, в&nbsp;корзине
+                          и&nbsp;в&nbsp;партнёрском портале был описан
+                          отдельно. Я&nbsp;собрала его&nbsp;в&nbsp;одну
+                          сущность и&nbsp;определила, какие атрибуты нужны
+                          в&nbsp;каждой точке.
+                        </p>
+                        <p class="text">
+                          На&nbsp;фронтенде вынесла состав пакета в&nbsp;общее
+                          место, откуда его&nbsp;использовали разные экраны.
+                          Разработчик затем подключил бэкенд.
+                        </p>
+                      </div>
+                    </div>
+
+                    <figure class="case-figure">
+                      <div class="case-figure__media case-figure__media--400">
+                        <img
+                          src="../assets/images/placeholder.webp"
+                          alt="Строка фильтров над картой и одна сущность пакета на карте, в корзине и в портале"
+                          width="3688"
+                          height="1600"
+                        />
+                      </div>
+                      <figcaption class="text case-figure__caption">
+                        Фильтры над&nbsp;картой и&nbsp;одна сущность пакета
+                        на&nbsp;карте / в&nbsp;корзине / в&nbsp;портале
+                      </figcaption>
+                    </figure>
+                  </div>
+                </section>
+
+                <section class="case-section" id="order">
+                  <h2 class="subheading case-section__label">
+                    3.&nbsp;Заказ: один интерфейс, разные условия
+                  </h2>
+
+                  <div class="case-section__body">
+                    <div class="case-block">
+                      <h3 class="heading">
+                        Две&nbsp;независимые настройки партнёра
+                      </h3>
+                      <div class="case-prose">
+                        <p class="text">
+                          Из&nbsp;переговоров с&nbsp;партнёрами пришло
+                          ограничение: часть клиник уже&nbsp;ведёт запись
+                          в&nbsp;своей системе и&nbsp;не&nbsp;готова
+                          дублировать слоты в&nbsp;нашей. Поэтому бронирование
+                          через AskBefore сделали отдельной настройкой&nbsp;—
+                          партнёр может включить или&nbsp;выключить его.
+                        </p>
+                        <p class="text">
+                          Вторая ось&nbsp;— оплата: через платформу или&nbsp;на
+                          месте. В&nbsp;продукте она&nbsp;определяется тарифом
+                          партнёра и&nbsp;не&nbsp;зависит от&nbsp;настройки
+                          бронирования.
+                        </p>
+                        <p class="text">
+                          Две&nbsp;оси дают четыре конфигурации. Для&nbsp;каждой
+                          нужно объяснить человеку, что&nbsp;он оформляет,
+                          когда платит и&nbsp;как&nbsp;узнает время приёма.
+                          Знать внутреннюю конфигурацию клиники ему для&nbsp;этого
+                          не&nbsp;нужно.
+                        </p>
+                      </div>
+                    </div>
+
+                    <div class="case-block">
+                      <h3 class="heading">
+                        Четыре конфигурации&nbsp;— ещё&nbsp;не&nbsp;четыре
+                        сценария
+                      </h3>
+                      <div class="case-prose">
+                        <p class="text">
+                          В&nbsp;каждой конфигурации заказ может пройти разные
+                          пути: человек пришёл на&nbsp;приём, пришёл после
+                          истечения срока хранения данных, не&nbsp;пришёл,
+                          отменил заказ сам или&nbsp;получил отмену
+                          от&nbsp;партнёра.
+                        </p>
+                        <p class="text">
+                          Я&nbsp;проверяла каждый путь с&nbsp;обеих сторон.
+                          Что&nbsp;видит пользователь и&nbsp;какие письма
+                          получает. Что&nbsp;видит партнёр в&nbsp;портале
+                          и&nbsp;какое действие должен выполнить.
+                          В&nbsp;каком состоянии после этого остаётся заказ.
+                        </p>
+                        <p class="text">
+                          Четыре конфигурации и&nbsp;пять сценариев дали
+                          двадцать девять сочетаний для&nbsp;проверки.
+                          Не&nbsp;все из&nbsp;них возможны, и&nbsp;не&nbsp;каждому
+                          нужен отдельный экран. Но&nbsp;для&nbsp;каждого нужно
+                          было определить поведение&nbsp;— или&nbsp;явно
+                          отметить, почему такой ветки нет.
+                        </p>
+                      </div>
+                    </div>
+
+                    <div class="case-block">
+                      <h3 class="heading">
+                        Разложила ветки на&nbsp;одну карту
+                      </h3>
+                      <div class="case-prose">
+                        <p class="text">
+                          По&nbsp;одной оси карты я&nbsp;разместила
+                          конфигурации партнёра, по&nbsp;другой&nbsp;—
+                          сценарии заказа. В&nbsp;каждой ячейке&nbsp;— что
+                          видит пользователь, какое у&nbsp;заказа состояние,
+                          какие письма уходят, что&nbsp;делает партнёр.
+                        </p>
+                        <p class="text">
+                          Так&nbsp;я&nbsp;проверяла не&nbsp;только наличие
+                          экранов, но&nbsp;и&nbsp;согласованность сообщений.
+                          Например, не&nbsp;обещает&nbsp;ли письмо то, чего нет
+                          в&nbsp;заказе, и&nbsp;знает&nbsp;ли партнёр, что
+                          от&nbsp;него ждут.
+                        </p>
+                        <p class="text">
+                          Эти&nbsp;ветки ещё&nbsp;не&nbsp;были реализованы
+                          в&nbsp;продукте. Я&nbsp;проектировала их&nbsp;с&nbsp;нуля,
+                          внутри существующей модели заказа.
+                        </p>
+                      </div>
+                    </div>
+
+                    <figure class="case-figure">
+                      <div class="case-figure__media case-figure__media--680">
+                        <img
+                          src="../assets/images/placeholder.webp"
+                          alt="Карта конфигураций и сценариев заказа с раскрытой ячейкой"
+                          width="3692"
+                          height="2720"
+                        />
+                      </div>
+                      <figcaption class="text case-figure__caption">
+                        Карта: конфигурации ×&nbsp;сценарии; одна ячейка
+                        раскрыта
+                      </figcaption>
+                    </figure>
+
+                    <div class="case-block">
+                      <h3 class="heading">
+                        Одна&nbsp;ветка целиком: время согласуется напрямую
+                      </h3>
+                      <div class="case-prose">
+                        <p class="text">
+                          У&nbsp;партнёра выключено наше бронирование.
+                          Его&nbsp;предложения остаются на&nbsp;карте,
+                          но&nbsp;выбрать слот через AskBefore нельзя. Значит,
+                          интерфейс должен объяснить, как&nbsp;человек узнает
+                          время приёма.
+                        </p>
+                        <p class="text">
+                          Я&nbsp;разложила сценарий на&nbsp;обе стороны.
+                          Партнёр получает оповещение: связаться с&nbsp;человеком,
+                          согласовать время, отметить факт договорённости
+                          у&nbsp;нас и&nbsp;внести запись в&nbsp;свою систему.
+                        </p>
+                        <p class="text">
+                          Пользователь вместо выбора слота видит, что&nbsp;клиника
+                          свяжется с&nbsp;ним напрямую. Согласованное время
+                          платформа не&nbsp;получает, поэтому в&nbsp;заказе
+                          оно&nbsp;не&nbsp;появится. Это&nbsp;ограничение
+                          я&nbsp;тоже обозначила в&nbsp;интерфейсе.
+                        </p>
+                        <p class="text">
+                          Если&nbsp;человеку важно сразу выбрать дату
+                          и&nbsp;время, он&nbsp;может воспользоваться фильтром
+                          на&nbsp;карте. Тогда предложения без&nbsp;бронирования
+                          через платформу не&nbsp;попадают в&nbsp;выдачу.
+                        </p>
+                      </div>
+                    </div>
+
+                    <figure class="case-figure">
+                      <div class="case-figure__media case-figure__media--496">
+                        <img
+                          src="../assets/images/placeholder.webp"
+                          alt="Экран заказа без бронирования у пользователя и оповещение в партнёрском портале"
+                          width="3692"
+                          height="1984"
+                        />
+                      </div>
+                      <figcaption class="text case-figure__caption">
+                        Одна&nbsp;ветка, две&nbsp;стороны: экран заказа
+                        и&nbsp;оповещение в&nbsp;портале
+                      </figcaption>
+                    </figure>
+
+                    <div class="case-block">
+                      <h3 class="heading">
+                        Оплата меняет набор доступных действий
+                      </h3>
+                      <div class="case-prose">
+                        <p class="text">
+                          Бронирование определяет, как&nbsp;человек
+                          договаривается о&nbsp;времени. Способ оплаты&nbsp;—
+                          какие действия с&nbsp;деньгами доступны через
+                          платформу.
+                        </p>
+                        <p class="text">
+                          При&nbsp;оплате через AskBefore я&nbsp;предусмотрела
+                          ветку запроса возврата: пользователь отправляет
+                          запрос, партнёр рассматривает его&nbsp;со&nbsp;своей
+                          стороны. Сам&nbsp;запрос ещё&nbsp;не&nbsp;означает
+                          возврат. Для&nbsp;этой конфигурации предусмотрен
+                          более долгий срок хранения данных заказа&nbsp;—
+                          они&nbsp;могут понадобиться при&nbsp;разборе спора.
+                        </p>
+                        <p class="text">
+                          При&nbsp;оплате на&nbsp;месте возврат через AskBefore
+                          недоступен: платформа не&nbsp;принимала платёж.
+                          Вопросы расчётов человек решает с&nbsp;клиникой
+                          напрямую и&nbsp;в&nbsp;интерфейсе важно сказать
+                          именно это.
+                        </p>
+                      </div>
+                    </div>
+
+                    <figure class="case-figure">
+                      <div class="case-figure__media case-figure__media--368">
+                        <img
+                          src="../assets/images/placeholder.webp"
+                          alt="Две конфигурации оплаты: с веткой возврата и без неё"
+                          width="3688"
+                          height="1472"
+                        />
+                      </div>
+                      <figcaption class="text case-figure__caption">
+                        Две&nbsp;конфигурации оплаты рядом: у&nbsp;одной ветка
+                        возврата есть, у&nbsp;другой ячейка пустая
+                      </figcaption>
+                    </figure>
+
+                    <div class="case-block">
+                      <h3 class="heading">
+                        Последствие&nbsp;— рядом с&nbsp;действием
+                      </h3>
+                      <div class="case-prose">
+                        <p class="text">
+                          Из&nbsp;карты получились подписи под&nbsp;полями,
+                          баннеры, кнопки, модалки и&nbsp;письма. У&nbsp;похожих
+                          элементов могли различаться текст и&nbsp;поведение:
+                          одна конфигурация позволяла выбрать время,
+                          другая&nbsp;— только отправить заявку.
+                        </p>
+                        <p class="text">
+                          Я&nbsp;проверяла их&nbsp;по&nbsp;одному правилу:
+                          если ограничение влияет на&nbsp;решение человека,
+                          он&nbsp;должен увидеть его&nbsp;в&nbsp;самом сценарии.
+                        </p>
+                        <p class="text">
+                          Правило одно на&nbsp;все ветки: там, где&nbsp;продукт
+                          чего-то не&nbsp;знает, не&nbsp;контролирует
+                          или&nbsp;собирается сделать что-то с&nbsp;деньгами
+                          человека, он&nbsp;это называет. В&nbsp;домене, где
+                          человек и&nbsp;так тревожен, умолчание читается как
+                          подвох.
+                        </p>
+                        <p class="text">
+                          Например, отмена: люди склеивают отмену и&nbsp;возврат,
+                          поэтому мысль «отмена у&nbsp;нас, возврат решает
+                          партнёр» повторяется трижды&nbsp;— в&nbsp;блоке
+                          заказа, в&nbsp;модалке и&nbsp;в&nbsp;чекбоксе.
+                          За&nbsp;каждой ячейкой карты стоит такое&nbsp;же
+                          решение&nbsp;— своё для&nbsp;своей ветки.
+                        </p>
+                      </div>
+                    </div>
+
+                    <figure class="case-figure">
+                      <div class="case-figure__media case-figure__media--496">
+                        <img
+                          src="../assets/images/placeholder.webp"
+                          alt="Набор интерфейсных элементов под разные ветки заказа"
+                          width="3692"
+                          height="1984"
+                        />
+                      </div>
+                      <figcaption class="text case-figure__caption">
+                        Элементы под&nbsp;разные ветки: подпись, баннер,
+                        кнопка, модалка отмены, дата удаления
+                      </figcaption>
+                    </figure>
+                  </div>
+                </section>
+
+                <section class="case-section" id="entry">
+                  <h2 class="subheading case-section__label">
+                    4.&nbsp;Два&nbsp;продукта — один&nbsp;вход
+                  </h2>
+
+                  <div class="case-section__body">
+                    <div class="case-block">
+                      <h3 class="heading">
+                        Обмен живёт там, где&nbsp;не&nbsp;ломается
+                      </h3>
+                      <div class="case-prose">
+                        <p class="text">
+                          Осталось показать, как&nbsp;два продукта живут рядом.
+                          Вход у&nbsp;них один, но&nbsp;набор доступного зависит
+                          от&nbsp;носителя.
+                        </p>
+                        <p class="text">
+                          В&nbsp;целевой схеме на&nbsp;десктопе
+                          и&nbsp;в&nbsp;мобильном браузере остаются карта
+                          и&nbsp;заказы. Для&nbsp;обмена человек переходит
+                          в&nbsp;приложение. В&nbsp;приложении доступны оба
+                          сценария.
+                        </p>
+                        <p class="text">
+                          Мы&nbsp;решили не&nbsp;поддерживать веб-обмен
+                          параллельно. Это&nbsp;означает дополнительный
+                          барьер: без&nbsp;установки приложения человек
+                          не&nbsp;сможет обменяться результатами через
+                          AskBefore. Пошли на&nbsp;это осознанно&nbsp;—
+                          носитель здесь влияет не&nbsp;только на&nbsp;удобство,
+                          но&nbsp;и&nbsp;на&nbsp;то, насколько человек
+                          контролирует свои медицинские документы.
+                        </p>
+                        <p class="text">
+                          Карта при&nbsp;этом работает и&nbsp;в&nbsp;вебе,
+                          и&nbsp;в&nbsp;приложении. Продукты остаются
+                          независимыми, общий у&nbsp;них только вход.
+                        </p>
+                      </div>
+                    </div>
+
+                    <figure class="case-figure">
+                      <div class="case-figure__media case-figure__media--400">
+                        <img
+                          src="../assets/images/placeholder.webp"
+                          alt="Десктоп и браузер против приложения: разные наборы доступных сценариев"
+                          width="3688"
+                          height="1600"
+                        />
+                      </div>
+                      <figcaption class="text case-figure__caption">
+                        Десктоп/браузер (карта, заказы, вход в&nbsp;приложение)
+                        vs&nbsp;приложение (карта, обмен)
+                      </figcaption>
+                    </figure>
+                  </div>
+                </section>
+
+                <section class="case-section case-section--last" id="results">
+                  <h2 class="subheading case-section__label">
+                    Итоги и&nbsp;ретроспектива
+                  </h2>
+
+                  <div class="case-section__body">
+                    <div class="case-block">
+                      <h3 class="heading">Что&nbsp;получилось</h3>
+                      <div class="case-metrics">
+                        <article class="case-metric case-metric--primary">
+                          <p class="number case-metric__value">7&nbsp;→&nbsp;3</p>
+                          <p class="text">
+                            шага создания папки обмена, ни&nbsp;одной функции
+                            не&nbsp;выброшено
+                          </p>
+                        </article>
+                        <article class="case-metric case-metric--quaternary">
+                          <p class="number case-metric__value">2</p>
+                          <p class="text">
+                            оси&nbsp;выбора в&nbsp;каталоге: что&nbsp;берут
+                            и&nbsp;чем оно&nbsp;отличается
+                          </p>
+                        </article>
+                        <article class="case-metric case-metric--secondary">
+                          <p class="number case-metric__value">1</p>
+                          <p class="text">
+                            сущность пакета на&nbsp;карте, в&nbsp;корзине
+                            и&nbsp;в&nbsp;партнёрском портале
+                          </p>
+                        </article>
+                        <article class="case-metric case-metric--tertiary">
+                          <p class="number case-metric__value">29</p>
+                          <p class="text">
+                            сценариев заказа на&nbsp;одной карте
+                          </p>
+                        </article>
+                      </div>
+                    </div>
+
+                    <div class="case-prose">
+                      <p class="text">
+                        В&nbsp;создании папки я&nbsp;сократила обязательный
+                        путь с&nbsp;семи шагов до&nbsp;трёх. Функции остались,
+                        но&nbsp;перестали быть условиями создания: наполнять
+                        и&nbsp;оформлять папку теперь можно после.
+                      </p>
+                      <p class="text">
+                        В&nbsp;агрегаторе разделила выбор анализа и&nbsp;условия
+                        поиска. Для&nbsp;пакетов связала представления
+                        на&nbsp;разных экранах через общий состав в&nbsp;коде.
+                      </p>
+                      <p class="text">
+                        Для&nbsp;заказа спроектировала ветки под&nbsp;четыре
+                        конфигурации оплаты и&nbsp;бронирования. Из&nbsp;карты
+                        вывела состояния, сообщения и&nbsp;действия
+                        для&nbsp;пользователя и&nbsp;партнёра.
+                      </p>
+                    </div>
+
+                    <div class="case-block">
+                      <h3 class="heading">
+                        Что&nbsp;ещё предстоит проверить
+                      </h3>
+                      <div class="case-prose">
+                        <p class="text">
+                          Данных об&nbsp;изменении конверсии или&nbsp;успешности
+                          прохождения у&nbsp;меня нет. Новый путь обмена
+                          проверили на&nbsp;маленькой выборке: нашли проблемы,
+                          внесли правки, проверили повторно. Приложение ещё
+                          разрабатывается, и&nbsp;его&nbsp;понятность
+                          и&nbsp;удобство ещё&nbsp;предстоит оценить.
+                        </p>
+                      </div>
+                    </div>
+
+                    <div class="case-block">
+                      <h3 class="heading">Что&nbsp;сделала&nbsp;бы&nbsp;иначе</h3>
+                      <div class="case-prose">
+                        <p class="text">
+                          Носитель я&nbsp;определила после редизайна,
+                          а&nbsp;не&nbsp;до. Мы&nbsp;перерисовали десктопный
+                          обмен, собрали прототип, прогнали по&nbsp;нему
+                          пользователя&nbsp;— и&nbsp;только из&nbsp;этого
+                          прогона стало ясно, что&nbsp;сценарий вообще
+                          не&nbsp;десктопный.
+                        </p>
+                        <p class="text">
+                          Вопрос «на&nbsp;каком носителе живёт этот сценарий»
+                          стоило задать до&nbsp;того, как&nbsp;рисовать экраны.
+                          Часть взаимодействий пришлось проектировать повторно,
+                          уже&nbsp;под&nbsp;мобильную платформу.
+                        </p>
+                        <p class="text">
+                          Сама ситуация давала повод рассмотреть телефон раньше.
+                          Человек показывает свои медицинские документы другому,
+                          чаще всего когда тот&nbsp;рядом. Это&nbsp;разговор
+                          с&nbsp;телефоном в&nbsp;руках и&nbsp;достаточная
+                          причина проверить вариант до&nbsp;детализации
+                          десктопных экранов.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+              </div>
+            </div>
+          </div>
+
+          <nav class="case-nav" aria-label="Навигация по кейсам">
+            <a class="link case-nav__all" href="../">Все&nbsp;кейсы</a>
+            <a class="link case-nav__next" href="ds.html">
+              AskBefore: мультибрендовая дизайн-система для&nbsp;трёх продуктов
+            </a>
+          </nav>
+        </main>
+
+        <footer class="footer">
+          <p class="heading footer__credit">
+            Ксения Шевелёва
+            <span class="subheading footer__role"
+              >| Product Designer &amp;&nbsp;Design Engineer</span
+            >
+          </p>
+          <p class="text footer__copy">© 2026</p>
+        </footer>
+      </div>
+    </div>
+
+    <script src="../js/main.js"></script>
+  </body>
+</html>
