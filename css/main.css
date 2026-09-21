@@ -665,7 +665,19 @@ body {
 .case-metrics {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-rows: repeat(2, minmax(0, 1fr));
+  gap: 1px;
   width: 100%;
+  overflow: clip;
+  background-color: var(--border);
+}
+
+/* Fill the empty top-right cell so the gap-line trick stays clean */
+.case-metrics::before {
+  content: "";
+  grid-column: 2;
+  grid-row: 1;
+  background-color: var(--bg-0);
 }
 
 .case-metric {
@@ -673,28 +685,25 @@ body {
   flex-direction: column;
   gap: 40px;
   padding-block: 24px;
+  background-color: var(--bg-0);
 }
 
 .case-metric--primary {
   grid-column: 1;
   grid-row: 1;
   padding-right: 24px;
-  border-right: 1px solid var(--border);
-  border-bottom: 1px solid var(--border);
 }
 
 .case-metric--secondary {
   grid-column: 1;
   grid-row: 2;
   padding-right: 24px;
-  border-right: 1px solid var(--border);
 }
 
 .case-metric--tertiary {
   grid-column: 2;
   grid-row: 2;
   padding-left: 24px;
-  border-top: 1px solid var(--border);
 }
 
 .case-nav {
@@ -946,17 +955,22 @@ body {
   }
 
   .case-metrics {
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    background-color: transparent;
+  }
+
+  .case-metrics::before {
+    content: none;
   }
 
   .case-metric--primary,
   .case-metric--secondary,
   .case-metric--tertiary {
-    grid-column: 1;
-    grid-row: auto;
+    grid-column: unset;
+    grid-row: unset;
     padding-inline: 0;
-    border-left: 0;
-    border-right: 0;
     border-top: 1px solid var(--border);
     border-bottom: 1px solid var(--border);
   }
