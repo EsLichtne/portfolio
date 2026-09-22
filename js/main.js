@@ -21,7 +21,7 @@
 })();
 
 (() => {
-  const covers = document.querySelectorAll(".case__cover");
+  const covers = document.querySelectorAll("[data-case-cover]");
   if (!covers.length || !("IntersectionObserver" in window)) return;
 
   const mq = window.matchMedia("(max-width: 1335px)");
@@ -29,7 +29,7 @@
 
   const sync = (entries) => {
     entries.forEach((entry) => {
-      entry.target.closest(".case")?.classList.toggle(
+      entry.target.closest("[data-case]")?.classList.toggle(
         "is-in-view",
         entry.isIntersecting
       );
@@ -42,7 +42,7 @@
       observer = null;
     }
 
-    document.querySelectorAll(".case.is-in-view").forEach((caseEl) => {
+    document.querySelectorAll("[data-case].is-in-view").forEach((caseEl) => {
       caseEl.classList.remove("is-in-view");
     });
 
