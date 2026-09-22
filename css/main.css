@@ -81,6 +81,13 @@ body {
   white-space: nowrap;
 }
 
+.link:hover,
+.header__brand:hover,
+.header__lang a:hover,
+.case-toc__item:hover {
+  opacity: 0.7;
+}
+
 /* —— Main —— */
 
 .main {
