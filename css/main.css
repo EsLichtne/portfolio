@@ -26,6 +26,7 @@ body {
   width: 100%;
   max-width: var(--page-max);
   min-width: 0;
+  margin-inline: auto;
   padding-inline: var(--page-pad);
 }
 
@@ -630,7 +631,6 @@ body {
   position: relative;
   width: 100%;
   overflow: clip;
-  background: var(--bg-100);
 }
 
 .case-figure__media--368 {
@@ -647,6 +647,14 @@ body {
 
 .case-figure__media--496 {
   aspect-ratio: 922 / 496;
+}
+
+.case-figure__media--527 {
+  aspect-ratio: 922 / 527;
+}
+
+.case-figure__media--600 {
+  aspect-ratio: 922 / 600;
 }
 
 .case-figure__media--680 {
