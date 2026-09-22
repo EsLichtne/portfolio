@@ -1,3 +1,27 @@
+@font-face {
+  font-family: "IBM Plex Mono";
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+  src: url("../assets/fonts/ibm-medium.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "IBM Plex Mono";
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  src: url("../assets/fonts/ibm-bold.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Inter";
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  src: url("../assets/fonts/inter-bold.woff2") format("woff2");
+}
+
 /* Text styles from Figma: Typography (286:7054) */
 
 .heading {
