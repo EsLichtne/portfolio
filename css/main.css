@@ -583,6 +583,11 @@ body {
   color: var(--fg-subtext);
 }
 
+.case-section__link {
+  color: var(--fg-primary);
+  align-self: start;
+}
+
 .case-section__body {
   display: flex;
   flex-direction: column;
