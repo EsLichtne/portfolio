@@ -616,7 +616,7 @@ body {
   flex-direction: column;
   gap: 56px;
   min-height: 256px;
-  padding: 24px;
+  padding: 24px 24px 32px;
   background: var(--bg-100);
 }
 
@@ -659,8 +659,16 @@ body {
   aspect-ratio: 922 / 496;
 }
 
+.case-figure__media--516 {
+  aspect-ratio: 922 / 516;
+}
+
 .case-figure__media--527 {
   aspect-ratio: 922 / 527;
+}
+
+.case-figure__media--559 {
+  aspect-ratio: 922 / 559;
 }
 
 .case-figure__media--600 {
