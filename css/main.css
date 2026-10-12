@@ -343,13 +343,13 @@ body {
   padding-right: 24px;
 }
 
-.principle--design-system {
+.principle--user-research {
   grid-column: 3;
   grid-row: 1;
   padding-left: 24px;
 }
 
-.principle--ai {
+.principle--design-system {
   grid-column: 2;
   grid-row: 2;
   padding: 24px;
