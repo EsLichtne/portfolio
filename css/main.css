@@ -242,6 +242,10 @@ body {
   background: var(--bg-100);
 }
 
+.case__cover--static {
+  cursor: default;
+}
+
 .case__cover:hover {
   opacity: 1;
 }
