@@ -99,6 +99,12 @@ components:
     textColor: "{colors.fg-text}"
     rounded: "{rounded.none}"
     padding: 24px
+  testimonial:
+    backgroundColor: "{colors.bg-100}"
+    textColor: "{colors.fg-text}"
+    rounded: "{rounded.none}"
+    padding: 24px
+    gap: 40px
 ---
 
 ## Overview
@@ -190,6 +196,10 @@ Three-row grid: title + date; description + cover; full-width meta band with top
 ### Principles grid
 
 3×2 cell field with hairline cross rules drawn once on the grid (not per-card borders). Cells are open — not cards. Indices use `fg-subtext`; titles use heading.
+
+### Testimonials
+
+Section after cases: title (dot + heading) in column 1; quote panels span columns 2–3 in a 2×2 grid (third cell empty). Panels use `bg-100`, 24px padding, square corners — tonal fields, not bordered cards. Quote is body mono; author is heading, pinned to the panel bottom (`margin-top: auto`) so a shorter quote still aligns with its row partner. Gap between quote and author is 40px. On mobile, title stacks above a single-column list of panels.
 
 ### Header & footer
 
