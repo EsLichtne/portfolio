@@ -909,6 +909,7 @@ body {
     order: 3;
     gap: var(--grid-gap);
     position: static;
+    margin-bottom: 0;
   }
 
   .case__meta {
