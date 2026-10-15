@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Case study: a multi-brand design system — Ksenia Shevelyova
+    </title>
+    <meta
+      name="description"
+      content="Case study: the AskBefore multi-brand design system for three products. Tokens, components, specs and Figma-to-code sync."
+    />
+    <link rel="alternate" hreflang="ru" href="https://eslichtne.github.io/portfolio/cases/ds.html" />
+    <link rel="alternate" hreflang="en" href="https://eslichtne.github.io/portfolio/en/cases/ds.html" />
+    <link rel="icon" href="../../assets/favicon.ico" sizes="any" />
+    <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="../../assets/apple-touch-icon.png" />
+    <link
+      rel="icon"
+      href="../../assets/icon-512.png"
+      type="image/png"
+      sizes="512x512"
+    />
+    <link
+      rel="preload"
+      href="../../assets/fonts/ibm-medium.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link rel="stylesheet" href="../../css/tokens.css" />
+    <link rel="stylesheet" href="../../css/reset.css" />
+    <link rel="stylesheet" href="../../css/typography.css" />
+    <link rel="stylesheet" href="../../css/main.css" />
+  </head>
+  <body>
+    <div class="page">
+      <header class="header">
+        <div class="limiter header__inner">
+          <div class="header__brand">
+            <a class="header__logo" href="../" aria-label="Home">
+              <img
+                src="../../assets/images/logo.svg"
+                width="32"
+                height="40"
+                alt=""
+              />
+            </a>
+          </div>
+
+          <nav class="header__nav" aria-label="Main navigation">
+            <div class="header__links">
+              <a class="link header__link" href="https://drive.google.com/file/d/18vdCfP97DhUXtDuP7VFforcSTBHLVSn8/view?usp=sharing">CV</a>
+              <a class="link header__link" href="https://t.me/EsLichtne">Telegram</a>
+              <a class="link header__link" href="https://www.linkedin.com/in/eslichtne/">Linkedin</a>
+            </div>
+            <p class="text header__lang" aria-label="Language">
+              <a href="../../cases/ds.html" hreflang="ru" lang="ru">Ru</a>|<span aria-current="true">Eng</span>
+            </p>
+          </nav>
+        </div>
+      </header>
+
+      <div class="main">
+        <main class="main__content case-page">
+          <div class="case-main">
+            <div class="case-hero">
+              <a class="link case-hero__back" href="../">All case studies</a>
+
+              <div class="case-hero__heading">
+                <h1 class="heading case-hero__title">
+                  AskBefore: a&nbsp;multi-brand design system for&nbsp;three
+                  products
+                </h1>
+                <p class="text case-hero__date">Apr&nbsp;2026&nbsp;— Aug&nbsp;2026</p>
+              </div>
+
+              <div class="case-hero__cover">
+                <img
+                  src="../../assets/images/cases/ds/cover.webp"
+                  alt="Collage of components from the AskBefore multi-brand design system"
+                  width="3680"
+                  height="2720"
+                />
+              </div>
+
+              <div class="case-hero__meta">
+                <p class="text">3&nbsp;products</p>
+                <p class="text">Design system</p>
+                <div class="case-hero__meta-end">
+                  <p class="text">Storybook</p>
+                  <p class="text">Figma + code</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="case-body">
+              <nav class="case-toc" aria-label="Case study contents" data-case-toc>
+              <a class="case-toc__item is-active" href="#context">
+                <span class="text case-toc__num">01</span>
+                <span class="text case-toc__label">Context</span>
+              </a>
+              <a class="case-toc__item" href="#task">
+                <span class="text case-toc__num">02</span>
+                <span class="text case-toc__label">Problem → task</span>
+              </a>
+              <a class="case-toc__item" href="#tokens">
+                <span class="text case-toc__num">03</span>
+                <span class="text case-toc__label">Tokens</span>
+              </a>
+              <a class="case-toc__item" href="#components">
+                <span class="text case-toc__num">04</span>
+                <span class="text case-toc__label">Components</span>
+              </a>
+              <a class="case-toc__item" href="#specs">
+                <span class="text case-toc__num">05</span>
+                <span class="text case-toc__label">Specs</span>
+              </a>
+              <a class="case-toc__item" href="#results">
+                <span class="text case-toc__num">06</span>
+                <span class="text case-toc__label"
+                  >Results and retrospective</span
+                >
+              </a>
+            </nav>
+
+            <div class="case-content">
+              <section class="case-section" id="context">
+                <h2 class="subheading case-section__label">Context</h2>
+
+                <div class="case-section__body">
+                  <div class="case-block">
+                    <h3 class="heading">Starting point</h3>
+                    <div class="case-prose">
+                      <p class="text">
+                        The library was set up before I&nbsp;joined, for one
+                        product. I&nbsp;inherited a&nbsp;flat list
+                        of&nbsp;variables: the name told you the color,
+                        but not its role in&nbsp;the interface. From spring
+                        2026, I&nbsp;owned the design system end to&nbsp;end,
+                        from the token architecture to&nbsp;components, specs
+                        and code sync.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="case-block">
+                    <h3 class="heading">My role and the team</h3>
+                    <div class="case-prose">
+                      <p class="text">
+                        At&nbsp;AskBefore, I’m the lead product designer
+                        and design engineer: I&nbsp;design interfaces and build
+                        them in&nbsp;code.
+                      </p>
+                      <p class="text">
+                        There were two designers. I&nbsp;worked
+                        on&nbsp;the products full-time and made the decisions
+                        on&nbsp;the library architecture. The second designer
+                        joined part-time and worked with the rules
+                        and components already in&nbsp;place. The developer
+                        and the founder also write code for the project.
+                        I&nbsp;chose and implemented the decisions described
+                        here.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="case-block">
+                    <h3 class="heading">Constraints</h3>
+                    <div class="case-cards">
+                      <article class="case-card">
+                        <div class="case-card__header">
+                          <p class="text case-card__index">01</p>
+                          <h4 class="heading case-card__title">
+                            Figma Professional
+                          </h4>
+                        </div>
+                        <p class="text">
+                          the team was on&nbsp;the Figma Professional plan,
+                          with no&nbsp;Extended Collections
+                          and no&nbsp;Code Connect
+                        </p>
+                      </article>
+                      <article class="case-card">
+                        <div class="case-card__header">
+                          <p class="text case-card__index">02</p>
+                          <h4 class="heading case-card__title">
+                            Solo architecture
+                          </h4>
+                        </div>
+                        <p class="text">
+                          I&nbsp;handled the architecture alone, so&nbsp;for
+                          every decision I&nbsp;weighed the time to&nbsp;build
+                          it&nbsp;and how much work it&nbsp;would add later
+                        </p>
+                      </article>
+                      <article class="case-card">
+                        <div class="case-card__header">
+                          <p class="text case-card__index">03</p>
+                          <h4 class="heading case-card__title">
+                            Three products already in&nbsp;production
+                          </h4>
+                        </div>
+                        <p class="text">
+                          all three products were already in&nbsp;production,
+                          so&nbsp;the library had to&nbsp;be&nbsp;rebuilt
+                          together with the existing interfaces
+                        </p>
+                      </article>
+                    </div>
+                  </div>
+                </div>
+              </section>
+
+              <section class="case-section" id="task">
+                <h2 class="subheading case-section__label">
+                  Problem → task
+                </h2>
+
+                <div class="case-section__body">
+                  <div class="case-block">
+                    <h3 class="heading">What needed to&nbsp;change</h3>
+                    <div class="case-cards">
+                      <article class="case-card">
+                        <div class="case-card__header">
+                          <p class="text case-card__index">01</p>
+                          <h4 class="heading case-card__title">
+                            A&nbsp;component knows which product
+                            it&nbsp;belongs&nbsp;to
+                          </h4>
+                        </div>
+                        <div class="case-prose">
+                          <p class="text">Tokens:</p>
+                          <p class="text">
+                            give three products their own accents without
+                            three sets of&nbsp;components
+                          </p>
+                        </div>
+                      </article>
+                      <article class="case-card">
+                        <div class="case-card__header">
+                          <p class="text case-card__index">02</p>
+                          <h4 class="heading case-card__title">
+                            Figma and code describe different components
+                          </h4>
+                        </div>
+                        <div class="case-prose">
+                          <p class="text">Components:</p>
+                          <p class="text">
+                            bring Figma in&nbsp;line with code, so&nbsp;new
+                            screens are built from the existing library
+                          </p>
+                        </div>
+                      </article>
+                      <article class="case-card">
+                        <div class="case-card__header">
+                          <p class="text case-card__index">03</p>
+                          <h4 class="heading case-card__title">
+                            Usage rules live in&nbsp;the designer’s head
+                          </h4>
+                        </div>
+                        <div class="case-prose">
+                          <p class="text">Specs:</p>
+                          <p class="text">
+                            write down the rules, so&nbsp;others can use
+                            the components without&nbsp;me
+                          </p>
+                        </div>
+                      </article>
+                    </div>
+                  </div>
+                </div>
+              </section>
+
+              <section class="case-section" id="tokens">
+                <h2 class="subheading case-section__label">
+                  Tokens: moving product color out of&nbsp;the component
+                </h2>
+
+                <div class="case-section__body">
+                  <div class="case-block">
+                    <h3 class="heading">Where the three sets came from</h3>
+                    <div class="case-prose">
+                      <p class="text">
+                        Each product has its own accent: purple for
+                        the exchange, green for the aggregator, pink for
+                        the partner portal. By&nbsp;spring 2026, all three were
+                        already running in&nbsp;code, and in&nbsp;the library
+                        each accent had its own set of&nbsp;variants.
+                      </p>
+                    </div>
+                  </div>
+
+                  <figure class="case-figure">
+                    <div class="case-figure__media case-figure__media--368">
+                      <img
+                        src="../../assets/images/cases/ds/ds-1.webp"
+                        alt="Three color sets of one component for AskBefore products"
+                        width="3688"
+                        height="1472"
+                      />
+                    </div>
+                    <figcaption class="text case-figure__caption">
+                      One component multiplied into three color sets
+                    </figcaption>
+                  </figure>
+
+                  <div class="case-prose">
+                    <p class="text">
+                      Components referenced variables named by&nbsp;color
+                      directly. To&nbsp;give a&nbsp;button another product
+                      accent, I&nbsp;added one more variant. So&nbsp;the library
+                      grew with the number of&nbsp;products.
+                    </p>
+                    <p class="text">
+                      The component tied behavior to&nbsp;product color.
+                      A&nbsp;shared fix had to&nbsp;be&nbsp;repeated in&nbsp;three
+                      sets, and the next product would have added a&nbsp;fourth.
+                    </p>
+                  </div>
+
+                  <div class="case-block">
+                    <h3 class="heading">How I&nbsp;built the semantics</h3>
+                    <div class="case-prose">
+                      <p class="text">
+                        I&nbsp;went through the three sets and compared what
+                        each color was responsible for. The primary button
+                        background has one role, and that role became
+                        a&nbsp;semantic token. I&nbsp;worked through the other
+                        roles the same way.
+                      </p>
+                      <p class="text">
+                        Then came two layers: a&nbsp;primitive stores the color
+                        value, a&nbsp;semantic token describes the role
+                        and references the primitive. I&nbsp;bound components
+                        to&nbsp;semantics and ruled out direct references
+                        to&nbsp;primitives.
+                      </p>
+                    </div>
+                  </div>
+
+                  <figure class="case-figure">
+                    <div class="case-figure__media case-figure__media--496">
+                      <img
+                        src="../../assets/images/cases/ds/ds-6.webp"
+                        alt="A primitive stores the color, semantics store the role"
+                        width="3692"
+                        height="1984"
+                      />
+                    </div>
+                    <figcaption class="text case-figure__caption">
+                      A&nbsp;primitive stores the color, semantics store
+                      the role
+                    </figcaption>
+                  </figure>
+
+                  <div class="case-block">
+                    <h3 class="heading">
+                      How the product switches now
+                    </h3>
+                    <div class="case-prose">
+                      <p class="text">
+                        I&nbsp;set up&nbsp;a&nbsp;separate mode of&nbsp;the
+                        semantic layer for each product. In&nbsp;Figma, these
+                        are collection modes. In&nbsp;code, it’s
+                        a&nbsp;data attribute on&nbsp;the product wrapper.
+                      </p>
+                      <p class="text">
+                        The component stays the same. When the mode changes,
+                        it&nbsp;gets different token values: the same button
+                        becomes purple, green or&nbsp;pink. The whole library
+                        for three products fits in&nbsp;one Figma file.
+                      </p>
+                    </div>
+                  </div>
+
+                  <figure class="case-figure">
+                    <div class="case-figure__media case-figure__media--400">
+                      <img
+                        src="../../assets/images/cases/ds/ds-2.webp"
+                        alt="One component in three product color modes"
+                        width="3688"
+                        height="1600"
+                      />
+                    </div>
+                    <figcaption class="text case-figure__caption">
+                      The same component gets different color values
+                      through a&nbsp;mode
+                    </figcaption>
+                  </figure>
+
+                  <div class="case-prose">
+                    <p class="text">
+                      A&nbsp;new product is&nbsp;one more semantic mode,
+                      and components don’t change. Themes live
+                      on&nbsp;the primitive layer: the color values change
+                      there, the roles stay the same.
+                    </p>
+                  </div>
+
+                  <div class="case-block">
+                    <h3 class="heading">
+                      Why only color is&nbsp;tokenized
+                    </h3>
+                    <div class="case-prose">
+                      <p class="text">
+                        The system has 150&nbsp;color tokens. It&nbsp;has zero
+                        custom spacing or&nbsp;radius tokens.
+                      </p>
+                      <p class="text">
+                        The product was built on&nbsp;Tailwind from the start,
+                        so&nbsp;I&nbsp;kept its spacing scale. A&nbsp;custom
+                        vocabulary on&nbsp;top of&nbsp;it&nbsp;would add
+                        a&nbsp;second name for the same value, and keeping
+                        the two in&nbsp;sync would also be&nbsp;on&nbsp;me.
+                      </p>
+                      <p class="text">
+                        Figma has a&nbsp;connected library with the same scale.
+                        Its variables are named like the classes in&nbsp;code:
+                        one vocabulary for the design and the implementation.
+                      </p>
+                      <p class="text">
+                        → → → This way, I&nbsp;kept the dependency
+                        on&nbsp;Tailwind on&nbsp;purpose. The product has
+                        no&nbsp;plans to&nbsp;move away from&nbsp;it.
+                        If&nbsp;the interface ever needs its own density,
+                        that will be&nbsp;the reason to&nbsp;add custom tokens.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </section>
+
+              <section class="case-section" id="components">
+                <h2 class="subheading case-section__label">
+                  Components: matching Figma to&nbsp;what already works
+                </h2>
+
+                <div class="case-section__body">
+                  <div class="case-block">
+                    <h3 class="heading">
+                      Where the design diverged from code
+                    </h3>
+                    <div class="case-prose">
+                      <p class="text">
+                        Some components existed only in&nbsp;code. Others had
+                        different properties in&nbsp;Figma or&nbsp;were missing
+                        states. While people read the designs, a&nbsp;conversation
+                        fixed this. After we&nbsp;moved to&nbsp;building through
+                        MCP, an&nbsp;agent started reading the designs.
+                        It&nbsp;took a&nbsp;property from Figma, didn’t find
+                        it&nbsp;in&nbsp;code and created it&nbsp;from scratch.
+                      </p>
+                      <p class="text">
+                        Each description of&nbsp;the component looked fine
+                        on&nbsp;its own. The build often ended up with
+                        a&nbsp;duplicate.
+                      </p>
+                    </div>
+                  </div>
+
+                  <figure class="case-figure">
+                    <div class="case-figure__media case-figure__media--496">
+                      <img
+                        src="../../assets/images/cases/ds/ds-3.webp"
+                        alt="Comparing component properties in Figma and React"
+                        width="3692"
+                        height="1984"
+                      />
+                    </div>
+                    <figcaption class="text case-figure__caption">
+                      Property sync: Figma vs React
+                    </figcaption>
+                  </figure>
+
+                  <div class="case-block">
+                    <h3 class="heading">What I&nbsp;used as&nbsp;the reference</h3>
+                    <div class="case-prose">
+                      <p class="text">
+                        I&nbsp;took the implementation as&nbsp;the base: these
+                        components already worked in&nbsp;the product.
+                        I&nbsp;updated the Figma library to&nbsp;match them.
+                      </p>
+                      <p class="text">
+                        I&nbsp;worked one component at&nbsp;a&nbsp;time: read
+                        the code, checked properties and states, then brought
+                        the design in&nbsp;line. AI agents with Figma MCP helped
+                        find and highlight the differences.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="case-block">
+                    <h3 class="heading">
+                      How I&nbsp;linked a&nbsp;Figma component
+                      to&nbsp;a&nbsp;code component
+                    </h3>
+                    <div class="case-prose">
+                      <p class="text">
+                        Matching properties wasn’t enough. The agent still
+                        needed to&nbsp;be&nbsp;told which code component matches
+                        a&nbsp;specific Figma node. Without this link,
+                        it&nbsp;kept creating duplicates.
+                      </p>
+                      <p class="text">
+                        Code Connect exists for this, but it&nbsp;wasn’t
+                        available on&nbsp;our plan. I&nbsp;designed my&nbsp;own
+                        mechanism: component-manifest.json in&nbsp;the repository
+                        root.
+                      </p>
+                    </div>
+                  </div>
+
+                  <figure class="case-figure">
+                    <div class="case-figure__media case-figure__media--496">
+                      <img
+                        src="../../assets/images/cases/ds/ds-4.webp"
+                        alt="Part of component-manifest.json mapping Figma to code"
+                        width="3692"
+                        height="1984"
+                      />
+                    </div>
+                    <figcaption class="text case-figure__caption">
+                      Mapping manifest (component-manifest.json)
+                    </figcaption>
+                  </figure>
+
+                  <div class="case-prose">
+                    <p class="text">
+                      The manifest records which library component matches
+                      which code component and how Figma variants map
+                      to&nbsp;its props. The file is&nbsp;versioned with
+                      the code. In&nbsp;the instructions, I&nbsp;set the order:
+                      before generating markup, the agent reads the manifest
+                      and imports existing components.
+                    </p>
+                    <p class="text">
+                      The manifest also became a&nbsp;way to&nbsp;check
+                      the library for gaps. If&nbsp;an&nbsp;entry
+                      is&nbsp;incomplete, something is&nbsp;missing between
+                      Figma and code: the component itself, a&nbsp;property
+                      or&nbsp;the mapping between them.
+                    </p>
+                  </div>
+
+                  <div class="case-block">
+                    <h3 class="heading">
+                      How the mapping stays in&nbsp;sync
+                    </h3>
+                    <div class="case-prose">
+                      <p class="text">
+                        If&nbsp;you rename a&nbsp;component or&nbsp;its property
+                        and don’t update the mapping, the build fails.
+                        The mismatch shows up&nbsp;right away.
+                      </p>
+                      <p class="text">
+                        For new components, the team agreed on&nbsp;a&nbsp;rule:
+                        the manifest entry appears together with
+                        the component. I&nbsp;set the format and the rules,
+                        and after that, whoever writes the code can maintain
+                        the entry.
+                      </p>
+                      <p class="text">
+                        The manifest has 48&nbsp;entries now.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </section>
+
+              <section class="case-section" id="specs">
+                <h2 class="subheading case-section__label">
+                  Specs: writing down what I&nbsp;used to&nbsp;explain myself
+                </h2>
+
+                <div class="case-section__body">
+                  <div class="case-block">
+                    <h3 class="heading">
+                      What a&nbsp;component doesn’t tell you
+                    </h3>
+                    <div class="case-prose">
+                      <p class="text">
+                        A&nbsp;component in&nbsp;the library shows how
+                        it’s built. But it&nbsp;doesn’t always show when
+                        to&nbsp;use&nbsp;it, which state to&nbsp;pick and how
+                        it&nbsp;should behave.
+                      </p>
+                      <p class="text">
+                        While I&nbsp;built the screens myself, these rules
+                        stayed in&nbsp;my&nbsp;head. When others joined,
+                        I&nbsp;had to&nbsp;write them down so&nbsp;people
+                        wouldn’t have to&nbsp;come to&nbsp;me&nbsp;for
+                        explanations.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="case-block">
+                    <h3 class="heading">Where I&nbsp;put the rules</h3>
+                    <div class="case-prose">
+                      <p class="text">
+                        I&nbsp;wrote component specs and set up&nbsp;Storybook,
+                        where designers and developers can see all component
+                        properties and states live. It&nbsp;also shows sync
+                        progress: a&nbsp;component gets there once
+                        it&nbsp;fully matches in&nbsp;Figma and in&nbsp;code.
+                      </p>
+                    </div>
+                  </div>
+
+                  <figure class="case-figure">
+                    <div class="case-figure__media case-figure__media--680">
+                      <img
+                        src="../../assets/images/cases/ds/ds-5.webp"
+                        alt="Component spec in Figma and Storybook"
+                        width="3692"
+                        height="2720"
+                      />
+                    </div>
+                    <figcaption class="text case-figure__caption">
+                      Component spec in&nbsp;Figma and Storybook
+                    </figcaption>
+                  </figure>
+
+                  <div class="case-prose">
+                    <p class="text">
+                      All specs share one structure. A&nbsp;designer uses
+                      it&nbsp;to&nbsp;pick a&nbsp;component for a&nbsp;screen,
+                      a&nbsp;developer to&nbsp;check behavior, and an&nbsp;agent
+                      gets rules for building.
+                    </p>
+                    <p class="text">
+                      In&nbsp;the repository, the same knowledge is&nbsp;split
+                      into three sections: general design system rules,
+                      instructions for the agent and component specs.
+                    </p>
+                  </div>
+                </div>
+              </section>
+
+              <section class="case-section case-section--last" id="results">
+                <h2 class="subheading case-section__label">
+                  Results and retrospective
+                </h2>
+
+                <div class="case-section__body">
+                  <div class="case-block">
+                    <h3 class="heading">What came out of&nbsp;it</h3>
+                    <div class="case-metrics">
+                      <article class="case-metric case-metric--primary">
+                        <p class="number case-metric__value">43</p>
+                        <p class="text">
+                          components published in&nbsp;the production library
+                        </p>
+                      </article>
+                      <article class="case-metric case-metric--secondary">
+                        <p class="number case-metric__value">3&nbsp;→&nbsp;1</p>
+                        <p class="text">
+                          component sets and Figma files
+                        </p>
+                      </article>
+                      <article class="case-metric case-metric--tertiary">
+                        <p class="number case-metric__value">3</p>
+                        <p class="text">
+                          product surfaces on&nbsp;one system
+                        </p>
+                      </article>
+                    </div>
+                  </div>
+
+                  <div class="case-prose">
+                    <p class="text">
+                      The system runs in&nbsp;production on&nbsp;three product
+                      surfaces. The library has 43&nbsp;published components.
+                    </p>
+                    <p class="text">
+                      I&nbsp;merged three color sets into one. Now the product
+                      accent is&nbsp;set by&nbsp;a&nbsp;mode of&nbsp;the semantic
+                      collection. A&nbsp;new portal doesn’t need a&nbsp;separate
+                      copy of&nbsp;the library.
+                    </p>
+                    <p class="text">
+                      I&nbsp;built the system, and other team members already
+                      build screens and prototypes on&nbsp;it. The token
+                      and component rules I&nbsp;set held up&nbsp;through these
+                      changes: new implementations fit into the same structure.
+                    </p>
+                  </div>
+
+                  <div class="case-block">
+                    <h3 class="heading">What I&nbsp;would do&nbsp;differently</h3>
+                    <div class="case-prose">
+                      <p class="text">
+                        The flat library was started before me&nbsp;for one
+                        product, but I&nbsp;was the one who built the partner
+                        portal and the aggregator on&nbsp;it: for every new
+                        accent, I&nbsp;added component variants. By&nbsp;spring,
+                        I&nbsp;had three sets that later had to&nbsp;be&nbsp;merged
+                        into one.
+                      </p>
+                      <p class="text">
+                        Primitives and roles should have been separated
+                        as&nbsp;soon as&nbsp;it&nbsp;was clear there would
+                        be&nbsp;more than one product accent. Then new products
+                        would have been built on&nbsp;the shared library,
+                        and working interfaces wouldn’t have needed migrating
+                        to&nbsp;it.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+            </div>
+          </div>
+
+          <nav class="case-nav" aria-label="Case study navigation">
+            <a class="link case-nav__all" href="../">All case studies</a>
+            <a class="link case-nav__next" href="b2c.html">
+              AskBefore: making it easier to&nbsp;get tested
+              and&nbsp;share results
+            </a>
+          </nav>
+        </main>
+
+        <footer class="footer">
+          <p class="heading footer__credit">
+            Ksenia Shevelyova
+            <span class="subheading footer__role"
+              >| Product Designer &amp;&nbsp;Design Engineer</span
+            >
+          </p>
+          <p class="text footer__copy">© 2026</p>
+        </footer>
+      </div>
+    </div>
+
+    <script src="../../js/main.js"></script>
+  </body>
+</html>
