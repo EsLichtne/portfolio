@@ -153,7 +153,7 @@ Desktop composition is a **fixed three-column fluid grid** inside a max width of
 - **Columns:** Many blocks map content as `1 | 2–3` (title / lead in col 1, body or media spanning 2–3) or full-width three-column meta rows.
 - **Vertical rhythm:** Section gap **96px**, block gap **48px**, page stack **80px** below the fixed header. On narrower breakpoints, section/stack compress toward **64px**; horizontal padding may drop to **20px**.
 - **Header:** Fixed, full bleed, height driven by **65px** token; bottom hairline only.
-- **Case pages:** Sticky TOC in column 1; long-form content in columns 2–3. Hero cover is full-width of the content band (not an inset card).
+- **Case pages:** Sticky TOC in column 1; long-form content in columns 2–3. Hero cover is full-width of the content band (not an inset card). Inside a case section, major units (`case-block`, figures, standalone prose) stack with **40px** (`case-section__body`). A default `case-block` uses **16px** between title and prose. When a block also stacks a figure (or further prose) after the lead, use `case-block--spaced` (**40px**) and keep the title + lead prose in `case-block__group` (**16px**) so the heading stays tight to its copy.
 
 Avoid card grids in the hero, floating badges, and multi-widget first viewports. One job per section: one heading, one short supporting line, then the content.
 

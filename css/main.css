@@ -646,6 +646,17 @@ body {
   width: 100%;
 }
 
+.case-block--spaced {
+  gap: 40px;
+}
+
+.case-block__group {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+}
+
 .case-prose {
   display: flex;
   flex-direction: column;
@@ -716,6 +727,10 @@ body {
   aspect-ratio: 922 / 527;
 }
 
+.case-figure__media--543 {
+  aspect-ratio: 922 / 543;
+}
+
 .case-figure__media--559 {
   aspect-ratio: 922 / 559;
 }
@@ -769,6 +784,13 @@ body {
   gap: 40px;
   padding-block: 24px;
   background-color: var(--bg-0);
+}
+
+.case-metric__body {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
 }
 
 .case-metric--primary {
