@@ -747,6 +747,10 @@ body {
   aspect-ratio: 922 / 784;
 }
 
+.case-figure__media--874 {
+  aspect-ratio: 922 / 874;
+}
+
 .case-figure__media img {
   position: absolute;
   inset: 0;
