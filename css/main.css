@@ -731,8 +731,16 @@ body {
   aspect-ratio: 922 / 543;
 }
 
+.case-figure__media--552 {
+  aspect-ratio: 922 / 552;
+}
+
 .case-figure__media--559 {
   aspect-ratio: 922 / 559;
+}
+
+.case-figure__media--571 {
+  aspect-ratio: 922 / 571;
 }
 
 .case-figure__media--600 {
