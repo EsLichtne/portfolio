@@ -727,12 +727,24 @@ body {
   aspect-ratio: 922 / 527;
 }
 
+.case-figure__media--539 {
+  aspect-ratio: 922 / 539;
+}
+
 .case-figure__media--543 {
   aspect-ratio: 922 / 543;
 }
 
+.case-figure__media--552 {
+  aspect-ratio: 922 / 552;
+}
+
 .case-figure__media--559 {
   aspect-ratio: 922 / 559;
+}
+
+.case-figure__media--571 {
+  aspect-ratio: 922 / 571;
 }
 
 .case-figure__media--600 {
@@ -745,6 +757,10 @@ body {
 
 .case-figure__media--784 {
   aspect-ratio: 922 / 784;
+}
+
+.case-figure__media--874 {
+  aspect-ratio: 922 / 874;
 }
 
 .case-figure__media img {
