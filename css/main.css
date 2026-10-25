@@ -278,6 +278,33 @@ body {
   filter: grayscale(0);
 }
 
+.case__cover-lottie {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0;
+  filter: grayscale(1);
+  transition: filter 0.45s ease;
+}
+
+.case__cover-lottie svg {
+  width: 100%;
+  height: 100%;
+}
+
+.case__cover:hover .case__cover-lottie,
+.case.is-in-view .case__cover-lottie {
+  filter: grayscale(0);
+}
+
+.case__cover.is-lottie-ready .case__cover-lottie {
+  opacity: 1;
+}
+
+.case__cover.is-lottie-ready img {
+  opacity: 0;
+}
+
 .case__meta {
   grid-column: 1 / span 3;
   grid-row: 3;
@@ -552,6 +579,26 @@ body {
   height: 100%;
   object-fit: cover;
   pointer-events: none;
+}
+
+.case-hero__lottie {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0;
+}
+
+.case-hero__lottie svg {
+  width: 100%;
+  height: 100%;
+}
+
+.case-hero__cover.is-lottie-ready .case-hero__lottie {
+  opacity: 1;
+}
+
+.case-hero__cover.is-lottie-ready img {
+  opacity: 0;
 }
 
 .case-hero__meta {
@@ -1144,6 +1191,10 @@ body {
   }
 
   .case.is-in-view .case__cover img {
+    filter: grayscale(0);
+  }
+
+  .case.is-in-view .case__cover-lottie {
     filter: grayscale(0);
   }
 
