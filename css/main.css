@@ -122,6 +122,11 @@ body {
   gap: var(--block-gap);
 }
 
+#cases,
+#about {
+  scroll-margin-top: calc(var(--header-height) + 24px);
+}
+
 /* —— Intro —— */
 
 .intro {
@@ -1290,6 +1295,11 @@ body {
   }
 
   .case-section {
+    scroll-margin-top: calc(var(--header-height) + 16px);
+  }
+
+  #cases,
+  #about {
     scroll-margin-top: calc(var(--header-height) + 16px);
   }
 

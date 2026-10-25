@@ -243,7 +243,7 @@ Header: logo left, nav links + language switch right, `bg-0` background, bottom 
 
 Drawer from the right, only below `1335px`. Markup: burger `button` in the header (`data-menu-button`), full-viewport overlay (`data-menu-overlay`), panel `nav#mobile-menu` (`data-menu-panel`).
 
-**Structure:** panel visible width **280px** (`bg-0`); links «Главная» / «Обо мне» (en: Home / About me); subheading «Контакты» / «Contacts» in `fg-subtext`; then CV, Telegram, Linkedin; language switch centered at the bottom. Row height **48px** (`padding-block: 12px` + 24px line). Horizontal padding **20px**. For open bounce, the panel is drawn **304px** wide with `right: -24px` and extra **24px** right padding so content alignment matches the mock and no gap shows at the right edge.
+**Structure:** panel visible width **280px** (`bg-0`); links «Кейсы» / «Обо мне» (en: Case studies / About me) — anchors to home sections `#cases` and `#about`, native scroll via `scroll-behavior` and `scroll-margin-top`; subheading «Контакты» / «Contacts» in `fg-subtext`; then CV, Telegram, Linkedin; language switch centered at the bottom. Row height **48px** (`padding-block: 12px` + 24px line). Horizontal padding **20px**. For open bounce, the panel is drawn **304px** wide with `right: -24px` and extra **24px** right padding so content alignment matches the mock and no gap shows at the right edge.
 
 **States:** closed → open (`is-open` on panel/overlay/body); closing uses a faster non-bounce curve. Burger icon: two 32×1.5 lines → merge to center → rotate ±15° into a cross; reverse on close without bounce.
 

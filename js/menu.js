@@ -14,6 +14,7 @@
   let isOpen = false;
   let isClosing = false;
   let closeTimer = 0;
+  let pendingHash = "";
 
   const getFocusable = () => {
     const inPanel = [...panel.querySelectorAll(focusableSelector)].filter(
@@ -65,6 +66,17 @@
     button.setAttribute("aria-expanded", "false");
     button.setAttribute("aria-label", openLabel);
     button.focus({ preventScroll: true });
+
+    if (pendingHash) {
+      const hash = pendingHash;
+      pendingHash = "";
+      if (location.hash === hash) {
+        const target = document.getElementById(hash.slice(1));
+        if (target) target.scrollIntoView();
+      } else {
+        location.hash = hash;
+      }
+    }
   };
 
   const close = () => {
@@ -100,7 +112,24 @@
 
   panel.addEventListener("click", (event) => {
     const link = event.target.closest("a[href]");
-    if (link && panel.contains(link)) close();
+    if (!link || !panel.contains(link)) return;
+
+    const href = link.getAttribute("href") || "";
+    try {
+      const url = new URL(href, location.href);
+      if (
+        url.origin === location.origin &&
+        url.pathname === location.pathname &&
+        url.hash.length > 1
+      ) {
+        event.preventDefault();
+        pendingHash = url.hash;
+      }
+    } catch (_) {
+      /* ignore invalid href */
+    }
+
+    close();
   });
 
   document.addEventListener("keydown", (event) => {
