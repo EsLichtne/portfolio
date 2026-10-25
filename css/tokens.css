@@ -20,4 +20,20 @@
   --block-gap: 48px;
   --page-stack-gap: 80px;
   --header-height: 65px;
+
+  /* Overlay (mobile menu) */
+  --overlay-bg: rgba(34, 34, 36, 0.2);
+  --overlay-blur: 8px;
+
+  /* Motion */
+  --ease-bounce: cubic-bezier(0.34, 1.35, 0.64, 1);
+  --ease-bounce-strong: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --ease-out: ease-out;
+  --ease-in: ease-in;
+  --ease-close: cubic-bezier(0.4, 0, 1, 1);
+  --duration-menu-open: 380ms;
+  --duration-menu-close: 240ms;
+  --duration-overlay: 200ms;
+  --duration-icon-merge: 120ms;
+  --duration-icon-cross: 220ms;
 }

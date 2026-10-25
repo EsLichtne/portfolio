@@ -69,6 +69,7 @@
 
           <nav class="header__nav" aria-label="Основная навигация">
             <div class="header__links">
+              <a class="link header__link" href="../about">Обо мне</a>
               <a class="link header__link" href="https://drive.google.com/file/d/1JG-x4sthd5C1vM5ESfaY1iLIdnaHIqLw/view?usp=sharing" target="_blank" rel="noopener noreferrer">CV</a>
               <a class="link header__link" href="https://t.me/EsLichtne" target="_blank" rel="noopener noreferrer">Telegram</a>
               <a class="link header__link" href="https://www.linkedin.com/in/eslichtne/" target="_blank" rel="noopener noreferrer">Linkedin</a>
@@ -79,6 +80,35 @@
           </nav>
         </div>
       </header>
+
+      <div class="menu-overlay" data-menu-overlay></div>
+      <nav class="menu" id="mobile-menu" data-menu-panel aria-label="Меню">
+        <div class="menu__body">
+          <div class="menu__nav">
+            <a class="link menu__link" href="../">Главная</a>
+            <a class="link menu__link" href="../about">Обо мне</a>
+          </div>
+          <div class="menu__contacts">
+            <p class="subheading menu__label">Контакты</p>
+            <div class="menu__contact-links">
+              <a class="link menu__link" href="https://drive.google.com/file/d/1JG-x4sthd5C1vM5ESfaY1iLIdnaHIqLw/view?usp=sharing" target="_blank" rel="noopener noreferrer">CV</a>
+              <a class="link menu__link" href="https://t.me/EsLichtne" target="_blank" rel="noopener noreferrer">Telegram</a>
+              <a class="link menu__link" href="https://www.linkedin.com/in/eslichtne/" target="_blank" rel="noopener noreferrer">Linkedin</a>
+            </div>
+          </div>
+        </div>
+        <p class="text menu__lang" aria-label="Язык">
+          <span aria-current="true">Ru</span>|<a href="../en/cases/ds" hreflang="en" lang="en">Eng</a>
+        </p>
+      </nav>
+      <button type="button" class="header__menu-btn" data-menu-button
+        aria-expanded="false" aria-controls="mobile-menu"
+        aria-label="Открыть меню" data-menu-close-label="Закрыть меню">
+        <span class="header__menu-icon" aria-hidden="true">
+          <span class="header__menu-line"></span>
+          <span class="header__menu-line"></span>
+        </span>
+      </button>
 
       <div class="main">
         <main class="main__content case-page">
@@ -824,6 +854,7 @@
       </div>
     </div>
 
+    <script src="../js/menu.js"></script>
     <script src="../js/main.js"></script>
   </body>
 </html>
