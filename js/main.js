@@ -59,6 +59,156 @@
 })();
 
 (() => {
+  if (!window.lottie) return;
+  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+  if (!("IntersectionObserver" in window)) return;
+
+  const nodes = document.querySelectorAll("[data-cover-lottie]");
+  if (!nodes.length) return;
+
+  const desktopMq = window.matchMedia(
+    "(hover: hover) and (min-width: 1336px)"
+  );
+  const mobileMq = window.matchMedia("(max-width: 1335px)");
+
+  nodes.forEach((container) => {
+    const cover = container.parentElement;
+    const src = container.getAttribute("data-src");
+    const mode = container.getAttribute("data-lottie-play");
+    if (!cover || !src || (mode !== "hover" && mode !== "visible")) return;
+
+    let anim = null;
+    let started = false;
+    let playObserver = null;
+
+    const play = () => {
+      if (!anim) return;
+      anim.play();
+    };
+
+    const pause = () => {
+      if (!anim) return;
+      anim.pause();
+    };
+
+    const disconnectPlayObserver = () => {
+      if (playObserver) {
+        playObserver.disconnect();
+        playObserver = null;
+      }
+    };
+
+    const bindHover = () => {
+      const syncMobile = () => {
+        disconnectPlayObserver();
+        if (!mobileMq.matches || !anim) return;
+
+        playObserver = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (!anim) return;
+              if (entry.isIntersecting) {
+                play();
+              } else {
+                pause();
+              }
+            });
+          },
+          { threshold: 0.45 }
+        );
+        playObserver.observe(cover);
+      };
+
+      cover.addEventListener("mouseenter", () => {
+        if (desktopMq.matches) play();
+      });
+      cover.addEventListener("mouseleave", () => {
+        if (desktopMq.matches) pause();
+      });
+      cover.addEventListener("focusin", () => {
+        if (desktopMq.matches && cover.matches(":focus-visible")) play();
+      });
+      cover.addEventListener("focusout", () => {
+        if (!desktopMq.matches) return;
+        window.requestAnimationFrame(() => {
+          if (!cover.contains(document.activeElement)) pause();
+        });
+      });
+
+      syncMobile();
+      mobileMq.addEventListener("change", syncMobile);
+    };
+
+    const bindVisible = () => {
+      playObserver = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (!anim) return;
+            if (entry.isIntersecting) {
+              play();
+            } else {
+              pause();
+            }
+          });
+        },
+        { threshold: 0 }
+      );
+      playObserver.observe(cover);
+    };
+
+    const load = () => {
+      if (started) return;
+      started = true;
+
+      anim = window.lottie.loadAnimation({
+        container,
+        renderer: "svg",
+        loop: true,
+        autoplay: false,
+        path: src,
+        rendererSettings: {
+          preserveAspectRatio: "xMidYMid slice",
+        },
+      });
+
+      anim.addEventListener("DOMLoaded", () => {
+        cover.classList.add("is-lottie-ready");
+        if (mode === "hover") {
+          anim.goToAndStop(0, true);
+          bindHover();
+        } else {
+          play();
+          bindVisible();
+        }
+      });
+
+      anim.addEventListener("data_failed", () => {
+        cover.classList.remove("is-lottie-ready");
+        disconnectPlayObserver();
+        anim = null;
+      });
+    };
+
+    if (mode === "visible") {
+      load();
+      return;
+    }
+
+    const lazyObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+          load();
+          lazyObserver.disconnect();
+        });
+      },
+      { rootMargin: "200px" }
+    );
+    lazyObserver.observe(cover);
+  });
+})();
+
+(() => {
   const toc = document.querySelector("[data-case-toc]");
   if (!toc || !("IntersectionObserver" in window)) return;
 
