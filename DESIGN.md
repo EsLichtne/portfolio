@@ -9,6 +9,19 @@ colors:
   fg-text: "#222224"
   fg-subtext: "#969698"
   fg-primary: "#482cff"
+  overlay-bg: "rgba(34, 34, 36, 0.2)"
+  overlay-blur: "8px"
+motion:
+  ease-bounce: "cubic-bezier(0.34, 1.35, 0.64, 1)"
+  ease-bounce-strong: "cubic-bezier(0.34, 1.56, 0.64, 1)"
+  ease-out: "ease-out"
+  ease-in: "ease-in"
+  ease-close: "cubic-bezier(0.4, 0, 1, 1)"
+  duration-menu-open: "380ms"
+  duration-menu-close: "240ms"
+  duration-overlay: "200ms"
+  duration-icon-merge: "120ms"
+  duration-icon-cross: "220ms"
 typography:
   heading:
     fontFamily: Inter
@@ -127,8 +140,27 @@ A near-monochrome light palette with a single interaction accent.
 - **bg-0 / Paper (#ffffff):** Page and header background.
 - **bg-100 / Mist (#edeeef):** Image placeholders, muted panels, principle/callout fills when a quiet tonal field is needed.
 - **border / Hairline (#c8c8c8):** 1px rules for header bottom, case meta bands, principle grid lines, TOC separators.
+- **overlay-bg / Ink 20% (`rgba(34, 34, 36, 0.2)`):** Mobile menu scrim only. Pair with `--overlay-blur: 8px`.
 
 Names match `css/tokens.css` (`--fg-primary`, `--fg-text`, etc.). Do not introduce additional accent hues. Do not use dark-mode skins, glow, or purple→indigo gradient themes beyond `fg-primary`.
+
+## Motion
+
+Tokens in `css/tokens.css` for the mobile menu (and reusable elsewhere when needed):
+
+| Token | Value | Use |
+| --- | --- | --- |
+| `--ease-bounce` | `cubic-bezier(0.34, 1.35, 0.64, 1)` | Panel open (light overshoot) |
+| `--ease-bounce-strong` | `cubic-bezier(0.34, 1.56, 0.64, 1)` | Icon cross rotate |
+| `--ease-out` / `--ease-in` | `ease-out` / `ease-in` | Overlay fade; icon lines merge |
+| `--ease-close` | `cubic-bezier(0.4, 0, 1, 1)` | Panel close (no bounce) |
+| `--duration-menu-open` | `380ms` | Panel slide in |
+| `--duration-menu-close` | `240ms` | Panel slide out |
+| `--duration-overlay` | `200ms` | Overlay opacity |
+| `--duration-icon-merge` | `120ms` | Burger lines meet |
+| `--duration-icon-cross` | `220ms` | Lines rotate to ±15° |
+
+Animate only `transform` and `opacity`. Respect `prefers-reduced-motion: reduce` (instant state change; overlay may keep a short fade).
 
 ## Typography
 
@@ -159,13 +191,15 @@ Avoid card grids in the hero, floating badges, and multi-widget first viewports.
 
 ## Elevation & Depth
 
-This system is **flat**. No drop shadows, no blur glass, no layered “floating” surfaces.
+This system is **flat**. No drop shadows, no layered “floating” surfaces.
 
 Depth and grouping come from:
 
 1. **Hairline rules** (`1px solid border`) — header, case meta bands, principle grid.
 2. **Tonal fields** — `bg-100` behind covers and quiet panels.
 3. **Typography and grid alignment** — not elevation.
+
+**Exception:** the mobile menu overlay uses `backdrop-filter` blur (`--overlay-blur`) plus `--overlay-bg`. Do not reuse blur glass elsewhere.
 
 Case cover images default to **grayscale** and animate to color on hover / in-view (`filter` transition ~0.45s). That motion is the primary “presence” cue; keep motion sparse and purposeful. Respect `prefers-reduced-motion`.
 
@@ -203,7 +237,23 @@ Section after cases: title (dot + heading) in column 1; quote panels span column
 
 ### Header & footer
 
-Header: logo left, nav links + language switch right, `bg-0` background, bottom `border`. Footer: name + muted role, copyright in `fg-subtext` — no heavy chrome.
+Header: logo left, nav links + language switch right, `bg-0` background, bottom `border`. On viewports `max-width: 1335px`, desktop `.header__links` / `.header__lang` hide and a burger button appears. Footer: name + muted role, copyright in `fg-subtext` — no heavy chrome.
+
+### Mobile menu
+
+Drawer from the right, only below `1335px`. Markup: burger `button` in the header (`data-menu-button`), full-viewport overlay (`data-menu-overlay`), panel `nav#mobile-menu` (`data-menu-panel`).
+
+**Structure:** panel visible width **280px** (`bg-0`); links «Кейсы» / «Обо мне» (en: Case studies / About me) — anchors to home sections `#cases` and `#about`, native scroll via `scroll-behavior` and `scroll-margin-top`; subheading «Контакты» / «Contacts» in `fg-subtext`; then CV, Telegram, Linkedin; language switch centered at the bottom. Row height **48px** (`padding-block: 12px` + 24px line). Horizontal padding **20px**. For open bounce, the panel is drawn **304px** wide with `right: -24px` and extra **24px** right padding so content alignment matches the mock and no gap shows at the right edge.
+
+**States:** closed → open (`is-open` on panel/overlay/body); closing uses a faster non-bounce curve. Burger icon: two 32×1.5 lines → merge to center → rotate ±15° into a cross; reverse on close without bounce.
+
+**Stacking (open):** overlay above the header; panel above the overlay; burger/cross button is `position: fixed` with the highest z-index (sibling after the panel in DOM), so it always sits on top of the page. Header content sits under the overlay.
+
+**Animation:** panel `translateX(100%)→0` open / reverse close; overlay opacity. Menu items are visible immediately on the sliding panel — no separate enter/leave animation.
+
+**Behavior:** close on cross (same button), overlay click, Esc, any menu link; lock `body` scroll while open; focus moves into the panel on open and back to the button on close; Tab stays inside button + panel; if viewport crosses above the mobile breakpoint, close and unlock scroll.
+
+**Accessibility:** `aria-expanded`, `aria-controls`, `aria-label` open/close; `aria-current="page"` on the current internal link; external links keep `target`/`rel`.
 
 ### Case TOC
 

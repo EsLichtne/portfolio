@@ -51,6 +51,7 @@
 
         <nav class="header__nav" aria-label="Основная навигация">
           <div class="header__links">
+            <a class="link header__link" href="#about">Обо мне</a>
             <a class="link header__link"
               href="https://drive.google.com/file/d/1JG-x4sthd5C1vM5ESfaY1iLIdnaHIqLw/view?usp=sharing" target="_blank"
               rel="noopener noreferrer">CV</a>
@@ -65,6 +66,39 @@
         </nav>
       </div>
     </header>
+
+    <div class="menu-overlay" data-menu-overlay></div>
+    <nav class="menu" id="mobile-menu" data-menu-panel aria-label="Меню">
+      <div class="menu__body">
+        <div class="menu__nav">
+          <a class="link menu__link" href="#cases">Кейсы</a>
+          <a class="link menu__link" href="#about">Обо мне</a>
+        </div>
+        <div class="menu__contacts">
+          <p class="subheading menu__label">Контакты</p>
+          <div class="menu__contact-links">
+            <a class="link menu__link"
+              href="https://drive.google.com/file/d/1JG-x4sthd5C1vM5ESfaY1iLIdnaHIqLw/view?usp=sharing"
+              target="_blank" rel="noopener noreferrer">CV</a>
+            <a class="link menu__link" href="https://t.me/EsLichtne" target="_blank"
+              rel="noopener noreferrer">Telegram</a>
+            <a class="link menu__link" href="https://www.linkedin.com/in/eslichtne/" target="_blank"
+              rel="noopener noreferrer">Linkedin</a>
+          </div>
+        </div>
+      </div>
+      <p class="text menu__lang" aria-label="Язык">
+        <span aria-current="true">Ru</span>|<a href="en/">Eng</a>
+      </p>
+    </nav>
+    <button type="button" class="header__menu-btn" data-menu-button
+      aria-expanded="false" aria-controls="mobile-menu"
+      aria-label="Открыть меню" data-menu-close-label="Закрыть меню">
+      <span class="header__menu-icon" aria-hidden="true">
+        <span class="header__menu-line"></span>
+        <span class="header__menu-line"></span>
+      </span>
+    </button>
 
     <div class="main">
       <main class="main__content">
@@ -83,7 +117,7 @@
           </p>
         </section>
 
-        <section class="section" aria-labelledby="cases-heading">
+        <section class="section" id="cases" aria-labelledby="cases-heading">
           <div class="section-heading">
             <div class="section-heading__title">
               <span class="section-heading__dot" aria-hidden="true"></span>
@@ -176,7 +210,7 @@
               </a>
 
               <div class="case__meta">
-                <p class="text">3&nbsp;продукта</p>
+                <p class="text">Мультибренд</p>
                 <p class="text">Дизайн-система</p>
                 <div class="case__meta-end">
                   <p class="text">Storybook</p>
@@ -196,9 +230,13 @@
               <div class="case__content">
                 <div class="case__description">
                   <p class="text">
-                    Партнёрский портал для&nbsp;клиник и&nbsp;лабораторий:
-                    локации, анализы, заказы, бронирования
-                    и&nbsp;управление командой
+                    Партнёрский портал&nbsp;— продукт AskBefore
+                    для&nbsp;клиник и&nbsp;лабораторий. Всё,
+                    что&nbsp;партнёр заводит здесь, пользователь
+                    видит на&nbsp;карте, а&nbsp;заказы с&nbsp;карты
+                    приходят обратно в&nbsp;портал. Работают
+                    с&nbsp;ним&nbsp;сотрудники клиники с&nbsp;разными
+                    ролями и&nbsp;доступами
                   </p>
                   <p class="text">
                     Спроектировала продуктовую логику, интерфейс
@@ -356,7 +394,7 @@
             <article class="principle principle--engineering">
               <div class="principle__header">
                 <p class="text principle__index">04</p>
-                <h3 class="heading principle__title">Дизайн-инженеринг</h3>
+                <h3 class="heading principle__title">Дизайн-инжиниринг</h3>
               </div>
               <p class="text principle__text">
                 Реализую интерфейсы сама&nbsp;— от&nbsp;компонентов
@@ -369,7 +407,7 @@
           </div>
         </section>
 
-        <section class="section" aria-labelledby="about-heading">
+        <section class="section" id="about" aria-labelledby="about-heading">
           <div class="section-heading__title--solo">
             <span class="section-heading__dot" aria-hidden="true"></span>
             <h2 class="heading section-heading__label" id="about-heading">
@@ -390,9 +428,9 @@
                 продуктовых решений и&nbsp;как&nbsp;работающий&nbsp;код
               </p>
               <p class="text">
-                Последний год&nbsp;я работала в&nbsp;берлинском
-                MedTech-стартапе AskBefore в&nbsp;роли продуктового
-                дизайнера и&nbsp;дизайн-инженера. Проектировала B2C-
+                Последний год&nbsp;я работаю в&nbsp;берлинском
+                MedTech-стартапе AskBefore в&nbsp;роли Product Designer
+                &amp; Design Engineer. Проектировала B2C-
                 и&nbsp;B2B-продукты, развивала дизайн-систему
                 и&nbsp;сама реализовывала интерфейсы. Сейчас продолжаю
                 помогать команде: веду стажёра и&nbsp;ревьюю мобильное
@@ -427,6 +465,7 @@
     </div>
   </div>
 
+  <script src="js/menu.js"></script>
   <script src="js/main.js"></script>
 </body>
 

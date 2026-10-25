@@ -4,12 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>
-      Case study: making it easier to get tested and share results —
-      Ksenia Shevelyova
+      Case study: making it easier to get tested and share results — Ksenia Shevelyova
     </title>
     <meta
       name="description"
-      content="Case study: two AskBefore consumer products, a clinic map and secure results sharing. User flows, privacy and the link between two independent products."
+      content="Case study: two AskBefore B2C products — a clinic map and secure results sharing. Flows, privacy and the link between independent products."
     />
     <link rel="alternate" hreflang="ru" href="https://eslichtne.github.io/portfolio/cases/b2c" />
     <link rel="alternate" hreflang="en" href="https://eslichtne.github.io/portfolio/en/cases/b2c" />
@@ -18,7 +17,7 @@
     <meta property="og:site_name" content="Ksenia Shevelyova" />
     <meta property="og:url" content="https://eslichtne.github.io/portfolio/en/cases/b2c" />
     <meta property="og:title" content="Case study: making it easier to get tested and share results — Ksenia Shevelyova" />
-    <meta property="og:description" content="Case study: two AskBefore consumer products, a clinic map and secure results sharing. User flows, privacy and the link between two independent products." />
+    <meta property="og:description" content="Case study: two AskBefore B2C products — a clinic map and secure results sharing. Flows, privacy and the link between independent products." />
     <meta property="og:image" content="https://eslichtne.github.io/portfolio/assets/og/og.png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
@@ -70,6 +69,7 @@
 
           <nav class="header__nav" aria-label="Main navigation">
             <div class="header__links">
+              <a class="link header__link" href="../#about">About me</a>
               <a class="link header__link" href="https://drive.google.com/file/d/1RFMoS6AXFGiBTUzmuPV4A-A30SHjbNmi/view?usp=sharing" target="_blank" rel="noopener noreferrer">CV</a>
               <a class="link header__link" href="https://t.me/EsLichtne" target="_blank" rel="noopener noreferrer">Telegram</a>
               <a class="link header__link" href="https://www.linkedin.com/in/eslichtne/" target="_blank" rel="noopener noreferrer">Linkedin</a>
@@ -81,6 +81,35 @@
         </div>
       </header>
 
+      <div class="menu-overlay" data-menu-overlay></div>
+      <nav class="menu" id="mobile-menu" data-menu-panel aria-label="Menu">
+        <div class="menu__body">
+          <div class="menu__nav">
+            <a class="link menu__link" href="../#cases">Case studies</a>
+            <a class="link menu__link" href="../#about">About me</a>
+          </div>
+          <div class="menu__contacts">
+            <p class="subheading menu__label">Contacts</p>
+            <div class="menu__contact-links">
+              <a class="link menu__link" href="https://drive.google.com/file/d/1RFMoS6AXFGiBTUzmuPV4A-A30SHjbNmi/view?usp=sharing" target="_blank" rel="noopener noreferrer">CV</a>
+              <a class="link menu__link" href="https://t.me/EsLichtne" target="_blank" rel="noopener noreferrer">Telegram</a>
+              <a class="link menu__link" href="https://www.linkedin.com/in/eslichtne/" target="_blank" rel="noopener noreferrer">Linkedin</a>
+            </div>
+          </div>
+        </div>
+        <p class="text menu__lang" aria-label="Language">
+          <a href="../../cases/b2c" hreflang="ru" lang="ru">Ru</a>|<span aria-current="true">Eng</span>
+        </p>
+      </nav>
+      <button type="button" class="header__menu-btn" data-menu-button
+        aria-expanded="false" aria-controls="mobile-menu"
+        aria-label="Open menu" data-menu-close-label="Close menu">
+        <span class="header__menu-icon" aria-hidden="true">
+          <span class="header__menu-line"></span>
+          <span class="header__menu-line"></span>
+        </span>
+      </button>
+
       <div class="main">
         <main class="main__content case-page">
           <div class="case-main">
@@ -89,27 +118,26 @@
 
               <div class="case-hero__heading">
                 <h1 class="heading case-hero__title">
-                  AskBefore: making it easier to&nbsp;get tested
-                  and&nbsp;share results
+                  AskBefore: making it easier to&nbsp;get tested and share results
                 </h1>
-                <p class="text case-hero__date">Feb&nbsp;2026&nbsp;— present</p>
+                <p class="text case-hero__date">Feb 2026&nbsp;— present</p>
               </div>
 
               <div class="case-hero__cover">
                 <img
                   src="../../assets/images/cases/b2c/cover.webp"
-                  alt="Path to creating an exchange folder: 7 steps before, 3 after"
-                  width="923"
-                  height="680"
+                  alt="AskBefore mobile app screens"
+                  width="4972"
+                  height="2976"
                 />
               </div>
 
               <div class="case-hero__meta">
-                <p class="text">MVP →&nbsp;MLP</p>
-                <p class="text">7&nbsp;→&nbsp;3 steps to create a folder</p>
+                <p class="text">MedTech</p>
+                <p class="text">7 → 3 steps to&nbsp;create a&nbsp;folder</p>
                 <div class="case-hero__meta-end">
                   <p class="text">B2C</p>
-                  <p class="text">Веб + мобильное приложение</p>
+                  <p class="text">Web + mobile app</p>
                 </div>
               </div>
             </div>
@@ -122,20 +150,26 @@
                 </a>
                 <a class="case-toc__item" href="#exchange">
                   <span class="text case-toc__num">02</span>
-                  <span class="text case-toc__label">Exchange</span>
+                  <span class="text case-toc__label"
+                    >Exchange: explaining an unfamiliar flow</span
+                  >
                 </a>
                 <a class="case-toc__item" href="#aggregator">
                   <span class="text case-toc__num">03</span>
-                  <span class="text case-toc__label">Aggregator</span>
+                  <span class="text case-toc__label"
+                    >Aggregator: bringing order to&nbsp;choice</span
+                  >
                 </a>
                 <a class="case-toc__item" href="#order">
                   <span class="text case-toc__num">04</span>
-                  <span class="text case-toc__label">Order</span>
+                  <span class="text case-toc__label"
+                    >Order: one interface, different conditions</span
+                  >
                 </a>
                 <a class="case-toc__item" href="#entry">
                   <span class="text case-toc__num">05</span>
                   <span class="text case-toc__label"
-                    >Two products, one entry&nbsp;point</span
+                    >Two products, one entry point</span
                   >
                 </a>
                 <a class="case-toc__item" href="#results">
@@ -151,39 +185,18 @@
                   <h2 class="subheading case-section__label">Context</h2>
 
                   <div class="case-section__body">
-                    <div class="case-prose">
-                      <p class="text">
-                        Results exchange is&nbsp;a&nbsp;product people didn’t
-                        have before. There is&nbsp;nothing to&nbsp;compare
-                        it&nbsp;to: no&nbsp;familiar entity, no&nbsp;known
-                        pattern. In&nbsp;testing, people opened a&nbsp;screen
-                        and didn’t understand where they were or&nbsp;what was
-                        expected of&nbsp;them.
-                      </p>
-                      <p class="text">
-                        I&nbsp;made the exchange clearer and shorter, made
-                        choosing in&nbsp;the aggregator more predictable,
-                        and moved the exchange scenario away from the medium
-                        where it&nbsp;broke.
-                      </p>
-                    </div>
-
                     <div class="case-block">
-                      <h3 class="heading">
-                        Two products, one anxious person
-                      </h3>
+                      <h3 class="heading">About the product</h3>
                       <div class="case-prose">
                         <p class="text">
-                          Two products serve the user, and they don’t know
-                          about each other. You can use one for&nbsp;a&nbsp;year
-                          and never open the other.
+                          AskBefore is&nbsp;a&nbsp;Berlin MedTech startup building an&nbsp;ecosystem
+                          for&nbsp;access to&nbsp;testing for&nbsp;sexually transmitted infections.
                         </p>
                         <p class="text">
-                          Both products live in&nbsp;one domain: STI testing.
-                          People come here anxious, and this frames every
-                          decision. The cost of&nbsp;an&nbsp;interface mistake
-                          isn’t “inconvenient”. It’s a&nbsp;person losing
-                          control over their medical data.
+                          It offers users two products: a&nbsp;map where you can find a&nbsp;clinic and book
+                          a&nbsp;test, and secure sharing of&nbsp;results between people. The products don’t
+                          know about each other&nbsp;— you can use one for&nbsp;a&nbsp;year and never open the
+                          other.
                         </p>
                       </div>
                       <a
@@ -195,12 +208,23 @@
                       >
                     </div>
 
+                    <figure class="case-figure">
+                      <div class="case-figure__media case-figure__media--600">
+                        <img
+                          src="../../assets/images/cases/b2c/b2c-15.webp"
+                          alt="Path to creating an exchange folder: 7 steps before, 3 now"
+                          width="4972"
+                          height="3232"
+                        />
+                      </div>
+                    </figure>
+
                     <div class="case-cards">
                       <article class="case-card">
                         <div class="case-card__header">
                           <p class="text case-card__index">01</p>
                           <h4 class="heading case-card__title">
-                            Aggregator — where to&nbsp;get tested
+                            Aggregator&nbsp;— where to&nbsp;get tested
                           </h4>
                         </div>
                         <p class="text">
@@ -213,46 +237,29 @@
                         <div class="case-card__header">
                           <p class="text case-card__index">02</p>
                           <h4 class="heading case-card__title">
-                            Exchange — how to&nbsp;show results
+                            Exchange&nbsp;— how to&nbsp;show results
                           </h4>
                         </div>
                         <p class="text">
                           folder with results,<br />
                           key,<br />
-                          sharing with a&nbsp;partner
+                          sending to a partner
                         </p>
                       </article>
                     </div>
 
                     <div class="case-block">
-                      <h3 class="heading">What existed before me</h3>
+                      <h3 class="heading">Team and my role</h3>
                       <div class="case-prose">
                         <p class="text">
-                          The exchange already had an&nbsp;MVP. The first
-                          version of&nbsp;the aggregator was designed
-                          by&nbsp;another designer on&nbsp;the team.
+                          The product team had 5 people: a&nbsp;founder with a&nbsp;Senior Product Designer
+                          background, a&nbsp;fullstack developer, a&nbsp;mobile developer, a&nbsp;part-time
+                          designer and me.
                         </p>
                         <p class="text">
-                          I&nbsp;continued work on&nbsp;both products:
-                          I&nbsp;designed the flows and interfaces and built
-                          them on&nbsp;the frontend. Product decisions were
-                          reviewed by&nbsp;the founder, who had previously
-                          worked as&nbsp;a&nbsp;senior designer and design lead.
-                        </p>
-                      </div>
-                    </div>
-
-                    <div class="case-block">
-                      <h3 class="heading">My role</h3>
-                      <div class="case-prose">
-                        <p class="text">
-                          I&nbsp;worked as&nbsp;a&nbsp;designer and design
-                          engineer: I&nbsp;designed the interface and took
-                          it&nbsp;to&nbsp;code myself. In&nbsp;the exchange,
-                          this let us&nbsp;test a&nbsp;new flow right inside
-                          the product. In&nbsp;the aggregator, it&nbsp;let
-                          me&nbsp;not only change screens but also connect
-                          shared data between them.
+                          I&nbsp;joined when both products were at&nbsp;the MVP stage. After user testing,
+                          I&nbsp;made the exchange clearer and shorter, and made choosing in&nbsp;the
+                          aggregator more predictable.
                         </p>
                       </div>
                     </div>
@@ -268,10 +275,9 @@
                             </h4>
                           </div>
                           <p class="text">
-                            Legal compliance wasn’t enough to&nbsp;make privacy
-                            decisions. I&nbsp;had to&nbsp;account for stigma,
-                            fear of&nbsp;disclosure and expectations
-                            of&nbsp;anonymity
+                            Legal compliance alone wasn’t enough to&nbsp;make privacy decisions&nbsp;—
+                            I&nbsp;had to&nbsp;account for&nbsp;stigma, fear of&nbsp;disclosure and
+                            expectations of&nbsp;anonymity
                           </p>
                         </article>
                         <article class="case-card">
@@ -282,10 +288,8 @@
                             </h4>
                           </div>
                           <p class="text">
-                            I&nbsp;made product decisions based on&nbsp;what
-                            data we&nbsp;can collect and store, on&nbsp;what
-                            legal basis we&nbsp;can use&nbsp;it and what
-                            protection it&nbsp;needs
+                            I&nbsp;made product decisions based on&nbsp;what data can be collected and stored,
+                            on&nbsp;what legal basis it can be used and what protection it needs
                           </p>
                         </article>
                         <article class="case-card">
@@ -296,10 +300,61 @@
                             </h4>
                           </div>
                           <p class="text">
-                            Both products were already in&nbsp;production.
-                            I&nbsp;changed them inside the existing code
-                            instead of&nbsp;rebuilding them
+                            Both products were already in&nbsp;production; I&nbsp;changed them inside the
+                            existing code rather than rebuilding them
                           </p>
+                        </article>
+                      </div>
+                    </div>
+
+                    <div class="case-block">
+                      <h3 class="heading">Results</h3>
+                      <div class="case-metrics">
+                        <article class="case-metric case-metric--primary">
+                          <p class="number case-metric__value">7&nbsp;→&nbsp;3</p>
+                          <div class="case-metric__body">
+                            <p class="text">
+                              steps to&nbsp;create an&nbsp;exchange folder, not a&nbsp;single feature dropped
+                            </p>
+                            <p class="text">
+                              → to&nbsp;shorten the path to&nbsp;first value: the folder is&nbsp;ready before
+                              the person loses the motivation to&nbsp;create it
+                            </p>
+                          </div>
+                        </article>
+                        <article class="case-metric case-metric--quaternary">
+                          <p class="number case-metric__value">2</p>
+                          <div class="case-metric__body">
+                            <p class="text">
+                              axes of&nbsp;choice in&nbsp;the catalog: what people take and how it differs
+                            </p>
+                            <p class="text">
+                              → so the catalog can scale and people can tell a&nbsp;test from its conditions
+                            </p>
+                          </div>
+                        </article>
+                        <article class="case-metric case-metric--secondary">
+                          <p class="number case-metric__value">1</p>
+                          <div class="case-metric__body">
+                            <p class="text">
+                              package entity on&nbsp;the map, in&nbsp;the cart and in&nbsp;the partner portal
+                            </p>
+                            <p class="text">
+                              → so the package contents change in&nbsp;one place instead of&nbsp;being
+                              maintained by&nbsp;hand in&nbsp;three
+                            </p>
+                          </div>
+                        </article>
+                        <article class="case-metric case-metric--tertiary">
+                          <p class="number case-metric__value">29</p>
+                          <div class="case-metric__body">
+                            <p class="text">
+                              order scenarios checked from both sides on&nbsp;one map
+                            </p>
+                            <p class="text">
+                              → so the product complies with GDPR and treats users with care
+                            </p>
+                          </div>
                         </article>
                       </div>
                     </div>
@@ -308,22 +363,42 @@
 
                 <section class="case-section" id="exchange">
                   <h2 class="subheading case-section__label">
-                    Exchange: explaining an&nbsp;unfamiliar flow
+                    Exchange: explaining an unfamiliar flow
                   </h2>
 
                   <div class="case-section__body">
-                    <div class="case-prose">
-                      <p class="text">
-                        In&nbsp;the aggregator, I&nbsp;could rely on&nbsp;familiar
-                        patterns: a&nbsp;map, a&nbsp;catalog, a&nbsp;cart.
-                        In&nbsp;the exchange, I&nbsp;had to&nbsp;explain
-                        the mechanics themselves: why you need a&nbsp;folder,
-                        who requests the results and what the recipient will
-                        see. So&nbsp;all the work here came down to&nbsp;one
-                        question: how do&nbsp;you make clear something
-                        a&nbsp;person has never seen before?
-                      </p>
+                    <div class="case-block">
+                      <h3 class="heading">What was wrong</h3>
+                      <div class="case-prose">
+                        <p class="text">
+                          Results exchange is&nbsp;a&nbsp;product people never had before. There’s nothing
+                          to&nbsp;compare it to: no familiar entity, no known pattern. In testing, people
+                          opened a&nbsp;screen and didn’t understand where they were or&nbsp;what was expected
+                          of&nbsp;them.
+                        </p>
+                        <p class="text">
+                          The aggregator can lean on&nbsp;familiar patterns: a&nbsp;map, a&nbsp;catalog,
+                          a&nbsp;cart. The exchange had to&nbsp;explain the mechanics themselves&nbsp;— why
+                          you need a&nbsp;folder, who requests the results and what the recipient will see. So
+                          all the work here came down to&nbsp;one question: how to&nbsp;make something clear
+                          that people have never seen before.
+                        </p>
+                      </div>
                     </div>
+
+                    <figure class="case-figure">
+                      <div class="case-figure__media case-figure__media--571">
+                        <img
+                          src="../../assets/images/cases/b2c/b2c-16.webp"
+                          alt="Sharing results with a QR code through AskBefore"
+                          width="3692"
+                          height="2285"
+                        />
+                      </div>
+                      <figcaption class="text case-figure__caption">
+                        Sharing results with a&nbsp;QR code through AskBefore
+                      </figcaption>
+                    </figure>
 
                     <div class="case-block case-block--spaced">
                       <div class="case-block__group">
@@ -332,24 +407,19 @@
                         </h3>
                         <div class="case-prose">
                           <p class="text">
-                            In&nbsp;testing, participants didn’t understand where
-                            they had landed, who was requesting results
-                            and what to&nbsp;do&nbsp;next.
+                            In testing, participants didn’t understand where they had landed, who was
+                            requesting their results and what to&nbsp;do next.
                           </p>
                           <p class="text">
-                            I&nbsp;broke down the feedback: for every comment
-                            from the interviews, I&nbsp;wrote down what exactly
-                            broke for the person, on&nbsp;which screen and what
-                            they misunderstood. I&nbsp;watched all the recordings
-                            and put the sprint materials together with
-                            the product screens in&nbsp;one file.
+                            I&nbsp;broke down the feedback: for&nbsp;every line from the interviews,
+                            I&nbsp;wrote down what exactly went wrong for&nbsp;the person&nbsp;— on&nbsp;which
+                            screen and what they misunderstood. I&nbsp;watched every recording and gathered
+                            the sprint materials together with the product screens in&nbsp;one file.
                           </p>
                           <p class="text">
-                            We&nbsp;scored as&nbsp;a&nbsp;team. Five axes described
-                            usability, two more described tone: how the product
-                            explains security and how human it&nbsp;sounds.
-                            It&nbsp;was a&nbsp;working scale for the review,
-                            not a&nbsp;product metric.
+                            We scored as&nbsp;a&nbsp;team. Five axes described usability, two more described
+                            tone: how the product explains safety and how human it sounds. It was
+                            a&nbsp;working scale for&nbsp;analysis, not a&nbsp;product metric.
                           </p>
                         </div>
                       </div>
@@ -358,31 +428,27 @@
                         <div class="case-figure__media case-figure__media--784">
                           <img
                             src="../../assets/images/cases/b2c/en/b2c-1.webp"
-                            alt="Rubric with seven axes: failures highlighted, the “warm” and “simple” axes"
+                            alt="Seven-axis scoring rubric: failures highlighted, with the “warm” and “simple” axes"
                             width="3692"
                             height="3136"
                           />
                         </div>
                         <figcaption class="text case-figure__caption">
-                          7&nbsp;axes for rating the interface
+                          7 axes for&nbsp;scoring the interface
                         </figcaption>
                       </figure>
 
                       <div class="case-prose">
                         <p class="text">
-                          “Simple” and “warm” got the lowest scores.
-                          In&nbsp;decisions, they sometimes conflicted:
-                          an&nbsp;extra explanation or&nbsp;visual touch
-                          supported the person but also asked for their
-                          attention.
+                          “Simple” and “warm” scored lowest. In decisions they sometimes conflicted:
+                          an&nbsp;extra explanation or&nbsp;visual touch supported the person but also
+                          demanded their attention.
                         </p>
                         <p class="text">
-                          The principle we&nbsp;chose: where they conflict,
-                          simplicity wins. Caring for the user here means,
-                          first of&nbsp;all, a&nbsp;clear path. We&nbsp;kept
-                          warmth where it&nbsp;doesn’t cost steps: we&nbsp;updated
-                          outdated illustrations and added onboarding
-                          to&nbsp;every part of&nbsp;the product.
+                          The principle we chose: where they conflict, simplicity wins. Caring for&nbsp;the
+                          user here means, above all, making the path clear. We kept warmth where it doesn’t
+                          cost steps: we updated outdated illustrations and added onboarding to&nbsp;every
+                          part of&nbsp;the product.
                         </p>
                       </div>
 
@@ -391,8 +457,8 @@
                           <img
                             src="../../assets/images/cases/b2c/en/b2c-12.webp"
                             alt="Writing HMWs during the design sprint"
-                            width="3692"
-                            height="2176"
+                            width="4972"
+                            height="2928"
                           />
                         </div>
                         <figcaption class="text case-figure__caption">
@@ -403,29 +469,24 @@
 
                     <div class="case-block">
                       <h3 class="heading">
-                        Create the folder first, fill it&nbsp;later
+                        Create the folder first, fill it later
                       </h3>
                       <div class="case-prose">
                         <p class="text">
-                          Before, creating a&nbsp;folder took seven steps.
-                          Now it&nbsp;takes three: create, come up&nbsp;with
-                          a&nbsp;key, save&nbsp;it. After that, the folder
-                          already exists: you can preview&nbsp;it, show
-                          the QR&nbsp;code or&nbsp;come back to&nbsp;it&nbsp;later.
+                          Before, creating a&nbsp;folder took seven steps; now it takes three: create it, come
+                          up with a&nbsp;key, save it. After that the folder already exists&nbsp;— you can
+                          preview it, show the QR code or&nbsp;come back to&nbsp;it later.
                         </p>
                         <p class="text">
-                          What changed is&nbsp;the moment of&nbsp;creation,
-                          not the feature set. Before, a&nbsp;person had
-                          to&nbsp;make every decision about the content first.
-                          Now uploading results, requesting results from
-                          another person and styling are edits to&nbsp;the
-                          folder. You can do&nbsp;them in&nbsp;any order,
-                          and they cost no&nbsp;steps.
+                          What changed was the moment of&nbsp;creation, not the set of&nbsp;features. Before,
+                          a&nbsp;person had to&nbsp;make every decision about the contents first. Now
+                          uploading results, requesting them from another person and styling the folder are
+                          edits to&nbsp;the folder, and they can be done in&nbsp;any order&nbsp;— they don’t
+                          cost steps.
                         </p>
                         <p class="text">
-                          We&nbsp;didn’t remove a&nbsp;single feature.
-                          We&nbsp;removed the need to&nbsp;go&nbsp;through all
-                          of&nbsp;them in&nbsp;a&nbsp;row to&nbsp;get a&nbsp;result.
+                          We didn’t remove a&nbsp;single feature. We removed the requirement to&nbsp;go
+                          through them all in&nbsp;a&nbsp;row to&nbsp;get a&nbsp;result.
                         </p>
                       </div>
                     </div>
@@ -434,31 +495,29 @@
                       <div class="case-figure__media case-figure__media--479">
                         <img
                           src="../../assets/images/cases/b2c/en/b2c-2.webp"
-                          alt="Two rows of steps: the old seven-step flow and the new three-step one"
+                          alt="Two rows of steps: the old seven-step path and the new three-step one"
                           width="3692"
                           height="1916"
                         />
                       </div>
                       <figcaption class="text case-figure__caption">
-                        7&nbsp;→&nbsp;3&nbsp;steps in&nbsp;the user flow
+                        7 steps → 3 steps in&nbsp;the user flow
                       </figcaption>
                     </figure>
 
                     <div class="case-block">
                       <h3 class="heading">
-                        We&nbsp;tested on&nbsp;a&nbsp;working prototype
+                        We tested on&nbsp;a&nbsp;working prototype
                       </h3>
                       <div class="case-prose">
                         <p class="text">
-                          I&nbsp;built the prototype directly in&nbsp;code,
-                          inside the product.
+                          I&nbsp;built the prototype directly in&nbsp;code, inside the product.
                         </p>
                         <p class="text">
-                          We&nbsp;invited the participant who had struggled most
-                          in&nbsp;the previous test and walked her through
-                          the new flow. One person isn’t a&nbsp;sample.
-                          It’s a&nbsp;worst-case check: if&nbsp;the flow doesn’t
-                          work for her, there’s nothing more to&nbsp;discuss.
+                          We invited the participant who had struggled the most in&nbsp;the previous round and
+                          walked her through the new path. One person isn’t a&nbsp;sample; it’s
+                          a&nbsp;worst-case check: if the path doesn’t work for&nbsp;her, there’s nothing more
+                          to&nbsp;discuss.
                         </p>
                       </div>
                     </div>
@@ -467,41 +526,36 @@
                       <div class="case-figure__media case-figure__media--496">
                         <img
                           src="../../assets/images/cases/b2c/en/b2c-3.webp"
-                          alt="Raw prototype in code and the run, fix, rerun loop"
+                          alt="Rough code prototype and the run — fix — rerun loop"
                           width="3692"
                           height="1984"
                         />
                       </div>
                       <figcaption class="text case-figure__caption">
-                        The path to&nbsp;creating an&nbsp;exchange folder,
-                        cut from 7&nbsp;to&nbsp;3&nbsp;steps
+                        The path to&nbsp;creating an&nbsp;exchange folder, cut from 7 to&nbsp;3 steps
                       </figcaption>
                     </figure>
 
                     <div class="case-block">
                       <h3 class="heading">
-                        Desktop turned out to&nbsp;be&nbsp;the wrong medium
+                        Desktop turned out to&nbsp;be the wrong medium
                       </h3>
                       <div class="case-prose">
                         <p class="text">
-                          These runs led to&nbsp;a&nbsp;conclusion that wasn’t
-                          in&nbsp;the brief: the exchange had to&nbsp;move
-                          to&nbsp;a&nbsp;mobile app.
+                          These runs led to&nbsp;a&nbsp;conclusion that wasn’t part of&nbsp;the task: the
+                          exchange had to&nbsp;move to&nbsp;a&nbsp;mobile app.
                         </p>
                         <p class="text">
-                          The first reason is&nbsp;the pattern. Exchanging
-                          results is&nbsp;a&nbsp;conversation between two
-                          people, and a&nbsp;phone fits&nbsp;it: show and scan
-                          a&nbsp;QR&nbsp;code, look at&nbsp;the results.
+                          The first reason is&nbsp;the pattern. Exchanging results is&nbsp;a&nbsp;conversation
+                          between two people, and a&nbsp;phone suits that kind of&nbsp;exchange: show and scan
+                          a&nbsp;QR code, look at&nbsp;the results.
                         </p>
                         <p class="text">
-                          The second is&nbsp;the option to&nbsp;restrict screen
-                          capture. A&nbsp;person shows someone else their
-                          medical documents, and on&nbsp;the web nothing can
-                          be&nbsp;done about&nbsp;it. A&nbsp;native app has
-                          a&nbsp;mechanism for this. It&nbsp;doesn’t solve
-                          the problem completely, but the difference between
-                          “impossible” and “inconvenient” matters here.
+                          The second is&nbsp;the ability to&nbsp;restrict screen capture. A person
+                          is&nbsp;showing someone their medical documents, and on&nbsp;the web there’s nothing
+                          you can do about that. A native app has a&nbsp;mechanism for&nbsp;it. It doesn’t
+                          fully solve the problem, but the difference between “impossible” and “inconvenient”
+                          matters here.
                         </p>
                       </div>
                     </div>
@@ -516,17 +570,15 @@
                         />
                       </div>
                       <figcaption class="text case-figure__caption">
-                        Web →&nbsp;native app: two reasons
+                        Web → native app: two reasons
                       </figcaption>
                     </figure>
 
                     <div class="case-prose">
                       <p class="text">
-                        The app is&nbsp;in&nbsp;development now, led
-                        by&nbsp;the second designer. I&nbsp;set the transfer
-                        principle and handed over guidelines, she laid out
-                        the flows. I&nbsp;ran regular reviews and joined
-                        the design work on&nbsp;the hard parts.
+                        The app is&nbsp;in&nbsp;development now, led by&nbsp;the second designer. I&nbsp;set
+                        the principle for&nbsp;the move and handed over guidelines; she laid out the flows.
+                        I&nbsp;run regular reviews and step into the design work in&nbsp;the hard places.
                       </p>
                     </div>
                   </div>
@@ -540,46 +592,33 @@
                   <div class="case-section__body">
                     <div class="case-prose">
                       <p class="text">
-                        The first version of&nbsp;the aggregator already had
-                        tests, packages and providers on&nbsp;the map.
-                        I&nbsp;took over when new selection criteria appeared.
-                        They had to&nbsp;fit in&nbsp;without turning
-                        the catalog into one long list of&nbsp;everything
-                        available.
+                        The first version of&nbsp;the aggregator already had tests, packages and providers
+                        on&nbsp;the map. I&nbsp;picked up the work when new selection criteria appeared. They
+                        had to&nbsp;fit in&nbsp;without turning the catalog into one long list
+                        of&nbsp;everything available.
                       </p>
                     </div>
 
                     <div class="case-block">
                       <h3 class="heading">
-                        The catalog is&nbsp;what to&nbsp;test for, filters are
-                        where and on&nbsp;what terms
+                        The catalog is&nbsp;what to&nbsp;test for, filters are where and on&nbsp;what terms
                       </h3>
                       <div class="case-prose">
                         <p class="text">
-                          Filters sat together with tests and packages
-                          in&nbsp;one shared selection block under the heading
-                          “Filters”. Neither the team nor the users could see
-                          the full picture: it&nbsp;was unclear what was being
-                          chosen and what only refined the choice.
+                          Filters sat in&nbsp;the same place as&nbsp;tests and packages&nbsp;— one shared
+                          selection block under the heading “Filters”. Neither the team nor the user could see
+                          the picture: it was unclear what was being chosen and what was refining the choice.
                         </p>
                         <p class="text">
-                          I&nbsp;separated them by&nbsp;what they are. Tests
-                          and packages are the catalog: items a&nbsp;person
-                          takes. Filters are attributes of&nbsp;items already
-                          chosen: not what the person takes, but how one option
-                          differs from another.
+                          I&nbsp;separated them by&nbsp;what they are. Tests and packages are the catalog:
+                          items a&nbsp;person takes. Filters are attributes of&nbsp;items already chosen: not
+                          what someone takes, but how one option differs from another.
                         </p>
                         <p class="text">
-                          The catalog stayed in&nbsp;the side column, and
-                          filters moved up&nbsp;into a&nbsp;row above the map.
-                        </p>
-                        <p class="text">
-                          This gave a&nbsp;rule for future changes: a&nbsp;new
-                          test goes into the catalog, a&nbsp;new search
-                          condition goes into filters. The split depends
-                          on&nbsp;the element’s role, not on&nbsp;where
-                          it’s easier to&nbsp;put it&nbsp;on&nbsp;the current
-                          screen.
+                          This set a&nbsp;rule for&nbsp;future changes: a&nbsp;new test goes into the catalog,
+                          a&nbsp;new search condition goes into the filters. The split depends on&nbsp;the
+                          element’s role, not on&nbsp;where it’s most convenient to&nbsp;put it on&nbsp;the
+                          current screen.
                         </p>
                       </div>
                     </div>
@@ -588,7 +627,7 @@
                       <div class="case-figure__media case-figure__media--496">
                         <img
                           src="../../assets/images/cases/b2c/b2c-5.webp"
-                          alt="Aggregator screens before and after: catalog and filters separated"
+                          alt="Two aggregator screens, before and after: catalog and filters separated"
                           width="3692"
                           height="1984"
                         />
@@ -600,27 +639,23 @@
 
                     <div class="case-block">
                       <h3 class="heading">
-                        Content grew out of&nbsp;what providers actually&nbsp;do
+                        Content grew out of&nbsp;what providers actually do
                       </h3>
                       <div class="case-prose">
                         <p class="text">
-                          The founder ran the provider negotiations. She brought
-                          data on&nbsp;how their offers differ, and I&nbsp;decided
-                          which differences become filters, where they sit
-                          and what they’re called in&nbsp;the interface.
+                          The founder led the negotiations with providers. She brought back data on&nbsp;how
+                          their offers differed, and I&nbsp;decided which differences became filters, where
+                          they sit and what they’re called in&nbsp;the interface.
                         </p>
                         <p class="text">
-                          For example, one test could be&nbsp;done with
-                          different methods, at&nbsp;different prices and with
-                          different turnaround times. That’s how the testing
-                          method filter appeared: basic or&nbsp;enhanced
-                          testing. Next to&nbsp;it&nbsp;came a&nbsp;price range
-                          and date and time selection.
+                          For example, one test could be done with different methods, at&nbsp;different prices
+                          and turnaround times. That’s how the testing method filter appeared&nbsp;— basic
+                          or&nbsp;enhanced testing. Next to&nbsp;it came a&nbsp;price range and date and time
+                          selection.
                         </p>
                         <p class="text">
-                          Packages needed separate work on&nbsp;their
-                          composition and on&nbsp;how they connect across
-                          screens.
+                          Packages needed separate work on&nbsp;their contents and on&nbsp;how they connect
+                          across screens.
                         </p>
                       </div>
                     </div>
@@ -629,7 +664,7 @@
                       <div class="case-figure__media case-figure__media--600">
                         <img
                           src="../../assets/images/cases/b2c/b2c-6.webp"
-                          alt="Filter row above the map and one package entity on the map, in the cart and in the portal"
+                          alt="Filter row above the map and a single package entity on the map, in the cart and in the portal"
                           width="3692"
                           height="2400"
                         />
@@ -641,24 +676,19 @@
 
                     <div class="case-prose">
                       <p class="text">
-                        The first set came from a&nbsp;marketing hypothesis,
-                        built around situations in&nbsp;which a&nbsp;person
-                        might want to&nbsp;get tested. After talking
-                        to&nbsp;a&nbsp;clinic, we&nbsp;revised&nbsp;it:
-                        the provider grouped tests by&nbsp;a&nbsp;different logic.
+                        The first set appeared as&nbsp;a&nbsp;marketing hypothesis&nbsp;— based
+                        on&nbsp;situations in&nbsp;which a&nbsp;person might want to&nbsp;get tested. After
+                        a&nbsp;discussion with a&nbsp;clinic, the contents were revised: the provider grouped
+                        tests by&nbsp;a&nbsp;different logic.
                       </p>
                       <p class="text">
-                        At&nbsp;the same time, a&nbsp;package was described
-                        separately on&nbsp;the map, in&nbsp;the cart
-                        and in&nbsp;the partner portal. I&nbsp;turned it&nbsp;into
-                        one entity and defined which attributes each
-                        touchpoint needs.
+                        Meanwhile, the package was described separately on&nbsp;the map, in&nbsp;the cart and
+                        in&nbsp;the partner portal. I&nbsp;brought it together into one entity and defined
+                        which attributes are needed at&nbsp;each point.
                       </p>
                       <p class="text">
-                        On&nbsp;the frontend, I&nbsp;moved the package
-                        composition into one shared place that different
-                        surfaces used. The developer then connected
-                        the backend.
+                        On the front end, I&nbsp;moved the package contents to&nbsp;a&nbsp;shared place that
+                        different surfaces used; the developer then connected the backend.
                       </p>
                     </div>
                   </div>
@@ -676,86 +706,61 @@
                       </h3>
                       <div class="case-prose">
                         <p class="text">
-                          Provider negotiations brought a&nbsp;constraint: some
-                          clinics already manage appointments in&nbsp;their own
-                          system and aren’t ready to&nbsp;duplicate slots
-                          in&nbsp;ours. So&nbsp;booking through AskBefore became
-                          a&nbsp;separate setting that a&nbsp;provider can turn
-                          on&nbsp;or&nbsp;off.
+                          Negotiations with providers brought a&nbsp;constraint: some clinics already manage
+                          appointments in&nbsp;their own system and aren’t ready to&nbsp;duplicate slots
+                          in&nbsp;ours. So booking through AskBefore became a&nbsp;separate setting&nbsp;—
+                          a&nbsp;provider can turn it on&nbsp;or&nbsp;off.
                         </p>
                         <p class="text">
-                          The second axis is&nbsp;payment: through the platform
-                          or&nbsp;at&nbsp;the location. In&nbsp;the product,
-                          it&nbsp;depends on&nbsp;the provider’s plan and
-                          is&nbsp;independent of&nbsp;the booking setting.
-                        </p>
-                        <p class="text">
-                          Two axes give four configurations. For each, we&nbsp;have
-                          to&nbsp;explain to&nbsp;the person what they’re
-                          ordering, when they pay and how they’ll find out
-                          the appointment time. They don’t need to&nbsp;know
-                          the clinic’s internal setup for that.
+                          The second axis is&nbsp;payment: through the platform or&nbsp;on&nbsp;site. In the
+                          product it’s determined by&nbsp;the provider’s plan and doesn’t depend on&nbsp;the
+                          booking setting.
                         </p>
                       </div>
                     </div>
 
-                    <div class="case-block">
-                      <h3 class="heading">
-                        Four configurations aren’t four scenarios yet
-                      </h3>
-                      <div class="case-prose">
-                        <p class="text">
-                          In&nbsp;each configuration, an&nbsp;order can take
-                          different paths: the person shows&nbsp;up, shows
-                          up&nbsp;after the data retention period has ended,
-                          doesn’t show&nbsp;up, cancels the order or&nbsp;gets
-                          a&nbsp;cancellation from the provider.
-                        </p>
-                        <p class="text">
-                          I&nbsp;checked every path from both sides: what
-                          the user sees and which emails they get, what
-                          the provider sees in&nbsp;the portal and what action
-                          they need to&nbsp;take, and what state the order
-                          is&nbsp;in&nbsp;afterwards.
-                        </p>
-                        <p class="text">
-                          The set of&nbsp;scenarios depends on&nbsp;booking:
-                          providers without it&nbsp;have six, providers with
-                          it&nbsp;have eight, and each set runs in&nbsp;two
-                          payment options. One more branch differs for providers
-                          without a&nbsp;license. In&nbsp;total, there were
-                          twenty-nine scenarios to&nbsp;check. Not every one
-                          needs its own screen, but each needed defined
-                          behavior.
-                        </p>
+                    <figure class="case-figure">
+                      <div class="case-figure__media case-figure__media--543">
+                        <img
+                          src="../../assets/images/cases/b2c/b2c-13.webp"
+                          alt="Order with a provider that has booking enabled and online payment"
+                          width="3692"
+                          height="2176"
+                        />
                       </div>
+                      <figcaption class="text case-figure__caption">
+                        Order with a&nbsp;provider that has booking enabled and online payment
+                      </figcaption>
+                    </figure>
+
+                    <div class="case-prose">
+                      <p class="text">
+                        Two axes give four configurations. For each one, the person needs to&nbsp;understand
+                        what they’re placing, when they pay and how they’ll find out the appointment time.
+                        They don’t need to&nbsp;know the clinic’s internal configuration for&nbsp;that.
+                      </p>
                     </div>
 
                     <div class="case-block">
                       <h3 class="heading">
-                        I&nbsp;put all the branches on&nbsp;one map
+                        One map for&nbsp;every order branch
                       </h3>
                       <div class="case-prose">
                         <p class="text">
-                          On&nbsp;one axis of&nbsp;the map, I&nbsp;placed
-                          the provider configurations, on&nbsp;the other,
-                          the order scenarios. Each cell shows what the user
-                          sees, what state the order is&nbsp;in, which emails
-                          go&nbsp;out and what the provider does.
+                          A configuration only sets the conditions; from there an&nbsp;order can take
+                          different paths: the person came, came after their data was deleted, didn’t come,
+                          cancelled themselves or&nbsp;got a&nbsp;cancellation from the provider. Without
+                          booking there are six such paths, with it there are eight, and each runs in&nbsp;two
+                          payment variants. 29 scenarios in&nbsp;total.
                         </p>
                         <p class="text">
-                          This way I&nbsp;checked not only that the screens
-                          existed but also that the messages were consistent.
-                          For example, whether an&nbsp;email promises something
-                          the order doesn’t have, and whether the provider knows
-                          what’s expected of&nbsp;them.
-                        </p>
-                        <p class="text">
-                          The map was based on&nbsp;screens that already worked
-                          in&nbsp;the product: I&nbsp;took them from production.
-                          The paths between them for different configurations
-                          didn’t exist. I&nbsp;designed those from scratch,
-                          within the existing order model.
+                          I&nbsp;laid them out on&nbsp;one map: provider configurations on&nbsp;one axis,
+                          scenarios on&nbsp;the other. Each cell records what the user sees, which emails they
+                          get, what the provider does and what state the order is&nbsp;left in. That’s how
+                          I&nbsp;checked consistency: does an&nbsp;email promise anything that isn’t
+                          in&nbsp;the order, and does the provider know what’s expected of&nbsp;them.
+                          I&nbsp;took the screens for&nbsp;the map from production and designed the paths
+                          between them from scratch.
                         </p>
                       </div>
                     </div>
@@ -764,43 +769,35 @@
                       <div class="case-figure__media case-figure__media--600">
                         <img
                           src="../../assets/images/cases/b2c/en/b2c-7.webp"
-                          alt="Map of order configurations and scenarios with one cell expanded"
+                          alt="Map of order configurations and scenarios with an expanded cell"
                           width="3692"
                           height="2400"
                         />
                       </div>
                       <figcaption class="text case-figure__caption">
-                        Map: configurations ×&nbsp;scenarios
+                        Map: configurations × scenarios
                       </figcaption>
                     </figure>
 
                     <div class="case-block">
                       <h3 class="heading">
-                        One branch end to&nbsp;end: the time is&nbsp;agreed
-                        directly
+                        One branch end to&nbsp;end: the time is&nbsp;agreed directly
                       </h3>
                       <div class="case-prose">
                         <p class="text">
-                          The provider has our booking turned off. Their offers
-                          stay on&nbsp;the map, but you can’t pick a&nbsp;slot
-                          through AskBefore. So&nbsp;the interface has
-                          to&nbsp;explain how the person will find out
-                          the appointment time.
+                          The situation: a&nbsp;provider has our booking turned off. Their offers stay
+                          on&nbsp;the map, but you can’t pick a&nbsp;slot through AskBefore. So the interface
+                          has to&nbsp;explain how the person will find out the appointment time.
                         </p>
                         <p class="text">
-                          I&nbsp;laid out the scenario for both sides.
-                          The provider gets a&nbsp;notification: contact
-                          the person, agree on&nbsp;a&nbsp;time, mark
-                          the arrangement in&nbsp;our system and add
-                          the appointment to&nbsp;their own.
+                          I&nbsp;laid out the scenario for&nbsp;both sides. The provider gets
+                          a&nbsp;notification: contact the person, agree on&nbsp;a&nbsp;time, mark the
+                          agreement on&nbsp;our side and add the appointment to&nbsp;their own system.
                         </p>
                         <p class="text">
-                          Instead of&nbsp;picking a&nbsp;slot, the user sees
-                          that the clinic will contact them directly.
-                          The platform doesn’t receive the agreed time,
-                          so&nbsp;it&nbsp;won’t appear in&nbsp;the order.
-                          I&nbsp;stated this limitation in&nbsp;the interface
-                          too.
+                          Instead of&nbsp;choosing a&nbsp;slot, the user sees that the clinic will contact
+                          them directly. The platform doesn’t receive the agreed time, so it won’t appear
+                          in&nbsp;the order. I&nbsp;made this limitation visible in&nbsp;the interface too.
                         </p>
                       </div>
                     </div>
@@ -809,50 +806,58 @@
                       <div class="case-figure__media case-figure__media--516">
                         <img
                           src="../../assets/images/cases/b2c/b2c-8.webp"
-                          alt="Order screen without booking on the user side and a notification in the partner portal"
+                          alt="Order screen without booking for the user and the notification in the partner portal"
                           width="3692"
                           height="2068"
                         />
                       </div>
                       <figcaption class="text case-figure__caption">
-                        The user is&nbsp;told the provider will contact them
-                        directly
+                        The user is&nbsp;told the provider will contact them directly
                       </figcaption>
                     </figure>
 
                     <div class="case-prose">
                       <p class="text">
-                        If&nbsp;picking a&nbsp;date and time right away
-                        matters to&nbsp;the person, they can use the filter
-                        on&nbsp;the map. Offers without booking through
-                        the platform then drop out of&nbsp;the results.
+                        If it matters to&nbsp;the person to&nbsp;pick a&nbsp;date and time right away, they
+                        can use the filter on&nbsp;the map. Then offers without platform booking drop out
+                        of&nbsp;the results.
                       </p>
                     </div>
 
+                    <figure class="case-figure">
+                      <div class="case-figure__media case-figure__media--874">
+                        <img
+                          src="../../assets/images/cases/b2c/b2c-14.webp"
+                          alt="The user picks an appointment date and time on the map"
+                          width="3692"
+                          height="3500"
+                        />
+                      </div>
+                      <figcaption class="text case-figure__caption">
+                        The user picks an&nbsp;appointment date and time on&nbsp;the map
+                      </figcaption>
+                    </figure>
+
                     <div class="case-block">
                       <h3 class="heading">
-                        Payment changes the available actions
+                        Payment changes the set of available actions
                       </h3>
                       <div class="case-prose">
                         <p class="text">
-                          Booking defines how the person agrees on&nbsp;the time.
-                          The payment method defines which money-related
-                          actions are available through the platform.
+                          Booking determines how the person agrees on&nbsp;a&nbsp;time; the payment method
+                          determines which actions with money are available through the platform.
                         </p>
                         <p class="text">
-                          For payment through AskBefore, I&nbsp;added a&nbsp;refund
-                          request branch: the user sends a&nbsp;request, and
-                          the provider reviews it&nbsp;on&nbsp;their side.
-                          A&nbsp;request doesn’t mean a&nbsp;refund yet.
-                          This configuration keeps order data longer, since
-                          it&nbsp;may be&nbsp;needed in&nbsp;a&nbsp;dispute.
+                          For payment through AskBefore, I&nbsp;added a&nbsp;refund request branch: the user
+                          sends a&nbsp;request, and the provider reviews it on&nbsp;their side. The request
+                          itself doesn’t mean a&nbsp;refund yet. This configuration has a&nbsp;longer
+                          retention period for&nbsp;order data&nbsp;— it may be needed to&nbsp;resolve
+                          a&nbsp;dispute.
                         </p>
                         <p class="text">
-                          For payment at&nbsp;the location, refunds through
-                          AskBefore aren’t available: the platform never took
-                          the payment. The person settles payment questions
-                          with the clinic directly, and the interface needs
-                          to&nbsp;say exactly that.
+                          With payment on&nbsp;site, refunds through AskBefore aren’t available: the platform
+                          didn’t take the payment. The person settles payment questions with the clinic
+                          directly, and the interface needs to&nbsp;say exactly that.
                         </p>
                       </div>
                     </div>
@@ -861,14 +866,13 @@
                       <div class="case-figure__media case-figure__media--496">
                         <img
                           src="../../assets/images/cases/b2c/en/b2c-9.webp"
-                          alt="Two payment configurations: with and without a refund branch"
+                          alt="Two payment configurations: with a refund branch and without"
                           width="3692"
                           height="1984"
                         />
                       </div>
                       <figcaption class="text case-figure__caption">
-                        Booking cancellation path for a&nbsp;provider with
-                        payment at&nbsp;the location
+                        Booking cancellation path with a&nbsp;provider that takes payment on&nbsp;site
                       </figcaption>
                     </figure>
 
@@ -878,33 +882,13 @@
                       </h3>
                       <div class="case-prose">
                         <p class="text">
-                          The map turned into field hints, banners, buttons,
-                          modals and emails. Similar elements could differ
-                          in&nbsp;copy and behavior: one configuration let you
-                          pick a&nbsp;time, another only let you send
-                          a&nbsp;request.
+                          The map produced field hints, banners, buttons, modals and emails. Similar elements
+                          could differ in&nbsp;text and behavior: one configuration let you choose
+                          a&nbsp;time, another only let you send a&nbsp;request.
                         </p>
                         <p class="text">
-                          I&nbsp;checked them against one rule: if&nbsp;a&nbsp;limitation
-                          affects a&nbsp;person’s decision, they have to&nbsp;see
-                          it&nbsp;within the flow itself.
-                        </p>
-                        <p class="text">
-                          The principle is&nbsp;the same across all branches:
-                          where the product doesn’t know something, doesn’t
-                          control something or&nbsp;is&nbsp;about to&nbsp;do
-                          something with the person’s money, it&nbsp;says
-                          so. In&nbsp;a&nbsp;domain where people are already
-                          anxious, silence reads as&nbsp;a&nbsp;catch.
-                        </p>
-                        <p class="text">
-                          Take cancellation: people merge cancelling and
-                          refunding, so&nbsp;the idea “you cancel with&nbsp;us,
-                          the provider decides on&nbsp;the refund” appears three
-                          times: in&nbsp;the order block, in&nbsp;the modal
-                          and in&nbsp;a&nbsp;checkbox. Every cell of&nbsp;the map
-                          has a&nbsp;decision like this, specific to&nbsp;its
-                          branch.
+                          I&nbsp;checked them against one rule: if a&nbsp;limitation affects the person’s
+                          decision, they have to&nbsp;see it within the flow itself.
                         </p>
                       </div>
                     </div>
@@ -919,47 +903,39 @@
                         />
                       </div>
                       <figcaption class="text case-figure__caption">
-                        Setting up user order configurations
+                        Setting up order configurations for the user
                       </figcaption>
                     </figure>
+
+                    <div class="case-prose">
+                      <p class="text">
+                        One rule for&nbsp;every branch: wherever the product doesn’t know something, doesn’t
+                        control it or&nbsp;is&nbsp;about to&nbsp;do something with the person’s money, it says
+                        so. In a&nbsp;domain where people are already anxious, silence reads
+                        as&nbsp;a&nbsp;trick.
+                      </p>
+                    </div>
                   </div>
                 </section>
 
                 <section class="case-section" id="entry">
                   <h2 class="subheading case-section__label">
-                    Two products, one entry&nbsp;point
+                    Two products, one entry point
                   </h2>
 
                   <div class="case-section__body">
                     <div class="case-block">
                       <h3 class="heading">
-                        The exchange lives where it&nbsp;doesn’t break
+                        The exchange lives where it doesn’t break
                       </h3>
                       <div class="case-prose">
                         <p class="text">
-                          What remained was to&nbsp;show how the two products
-                          live side by&nbsp;side. They share one entry point,
-                          but what’s available depends on&nbsp;the medium.
+                          What remained was to&nbsp;show how the two products live side by&nbsp;side. They
+                          share one entry point, but what’s available depends on&nbsp;the medium.
                         </p>
                         <p class="text">
-                          In&nbsp;the target setup, desktop and mobile browser
-                          keep the map and orders, and for the exchange
-                          the person goes to&nbsp;the app. Both scenarios are
-                          available in&nbsp;the app.
-                        </p>
-                        <p class="text">
-                          We&nbsp;decided not to&nbsp;support exchange
-                          on&nbsp;the web. This adds a&nbsp;barrier: without
-                          installing the app, a&nbsp;person can’t exchange
-                          results through AskBefore. We&nbsp;accepted this
-                          on&nbsp;purpose: here the medium affects not only
-                          convenience but also how much control the person has
-                          over their medical documents.
-                        </p>
-                        <p class="text">
-                          The map works both on&nbsp;the web and in&nbsp;the app.
-                          The products stay independent, and only the entry
-                          point is&nbsp;shared.
+                          In the target setup, desktop and mobile browsers keep the map and orders;
+                          for&nbsp;the exchange, people move to&nbsp;the app, where both flows are available.
                         </p>
                       </div>
                     </div>
@@ -968,7 +944,7 @@
                       <div class="case-figure__media case-figure__media--600">
                         <img
                           src="../../assets/images/cases/b2c/b2c-11.webp"
-                          alt="Desktop and browser vs the app: different sets of available scenarios"
+                          alt="Desktop and browser versus the app: different sets of available flows"
                           width="3692"
                           height="2400"
                         />
@@ -977,6 +953,19 @@
                         Mobile app screens (map, exchange)
                       </figcaption>
                     </figure>
+
+                    <div class="case-prose">
+                      <p class="text">
+                        We decided not to&nbsp;support exchange on&nbsp;the web. That adds a&nbsp;barrier:
+                        without installing the app, a&nbsp;person can’t exchange results through AskBefore. We
+                        accepted this deliberately&nbsp;— here the medium affects not only convenience but how
+                        much control the user has over their medical documents.
+                      </p>
+                      <p class="text">
+                        The map, meanwhile, works both on&nbsp;the web and in&nbsp;the app. The products stay
+                        independent; all they share is&nbsp;the entry point.
+                      </p>
+                    </div>
                   </div>
                 </section>
 
@@ -987,98 +976,77 @@
 
                   <div class="case-section__body">
                     <div class="case-block">
-                      <h3 class="heading">What came out of&nbsp;it</h3>
+                      <h3 class="heading">Results</h3>
+                      <div class="case-prose">
+                        <p class="text">
+                          The product launched recently, so I’m showing what’s already been done and what
+                          results we have. We tested the new exchange path on&nbsp;a&nbsp;small sample: we
+                          found where users got confused, fixed it and tested again. The mobile app
+                          is&nbsp;still in&nbsp;development, so its testing is&nbsp;still ahead.
+                        </p>
+                      </div>
                       <div class="case-metrics">
                         <article class="case-metric case-metric--primary">
                           <p class="number case-metric__value">7&nbsp;→&nbsp;3</p>
-                          <p class="text">
-                            steps to&nbsp;create an&nbsp;exchange folder,
-                            no&nbsp;feature dropped
-                          </p>
+                          <div class="case-metric__body">
+                            <p class="text">
+                              steps to&nbsp;create an&nbsp;exchange folder, not a&nbsp;single feature dropped
+                            </p>
+                            <p class="text">
+                              → to&nbsp;shorten the path to&nbsp;first value: the folder is&nbsp;ready before
+                              the person loses the motivation to&nbsp;create it
+                            </p>
+                          </div>
                         </article>
                         <article class="case-metric case-metric--quaternary">
                           <p class="number case-metric__value">2</p>
-                          <p class="text">
-                            selection axes in&nbsp;the catalog: what you take
-                            and how it&nbsp;differs
-                          </p>
+                          <div class="case-metric__body">
+                            <p class="text">
+                              axes of&nbsp;choice in&nbsp;the catalog: what people take and how it differs
+                            </p>
+                            <p class="text">
+                              → so the catalog can scale and people can tell a&nbsp;test from its conditions
+                            </p>
+                          </div>
                         </article>
                         <article class="case-metric case-metric--secondary">
                           <p class="number case-metric__value">1</p>
-                          <p class="text">
-                            package entity on&nbsp;the map, in&nbsp;the cart
-                            and in&nbsp;the partner portal
-                          </p>
+                          <div class="case-metric__body">
+                            <p class="text">
+                              package entity on&nbsp;the map, in&nbsp;the cart and in&nbsp;the partner portal
+                            </p>
+                            <p class="text">
+                              → so the package contents change in&nbsp;one place instead of&nbsp;being
+                              maintained by&nbsp;hand in&nbsp;three
+                            </p>
+                          </div>
                         </article>
                         <article class="case-metric case-metric--tertiary">
                           <p class="number case-metric__value">29</p>
-                          <p class="text">
-                            order scenarios on&nbsp;one map
-                          </p>
+                          <div class="case-metric__body">
+                            <p class="text">
+                              order scenarios checked from both sides on&nbsp;one map
+                            </p>
+                            <p class="text">
+                              → so the product complies with GDPR and treats users with care
+                            </p>
+                          </div>
                         </article>
                       </div>
                     </div>
 
-                    <div class="case-prose">
-                      <p class="text">
-                        We&nbsp;cut the required path for creating a&nbsp;folder
-                        from seven steps to&nbsp;three. The features stayed,
-                        but they’re no&nbsp;longer conditions for creation:
-                        you can fill and style the folder afterwards.
-                      </p>
-                      <p class="text">
-                        In&nbsp;the aggregator, I&nbsp;separated choosing
-                        a&nbsp;test from search conditions. For packages,
-                        I&nbsp;connected their views on&nbsp;different screens
-                        through a&nbsp;shared composition in&nbsp;code.
-                      </p>
-                      <p class="text">
-                        For orders, I&nbsp;designed branches for four payment
-                        and booking configurations. From the map, I&nbsp;derived
-                        states, messages and actions for the user
-                        and the provider.
-                      </p>
-                    </div>
-
                     <div class="case-block">
-                      <h3 class="heading">
-                        What still needs testing
-                      </h3>
+                      <h3 class="heading">What I&nbsp;would do differently</h3>
                       <div class="case-prose">
                         <p class="text">
-                          I&nbsp;don’t have data on&nbsp;changes in&nbsp;conversion
-                          or&nbsp;completion rates. We&nbsp;tested the new
-                          exchange flow on&nbsp;a&nbsp;small sample: found
-                          problems, made fixes, tested again. The app is&nbsp;still
-                          in&nbsp;development, and its clarity and usability are
-                          yet to&nbsp;be&nbsp;evaluated.
-                        </p>
-                      </div>
-                    </div>
-
-                    <div class="case-block">
-                      <h3 class="heading">What I&nbsp;would do&nbsp;differently</h3>
-                      <div class="case-prose">
-                        <p class="text">
-                          I&nbsp;decided on&nbsp;the medium after the redesign,
-                          not before. We&nbsp;redesigned the desktop exchange,
-                          built a&nbsp;prototype, ran a&nbsp;user through&nbsp;it,
-                          and only that run showed the scenario isn’t
-                          a&nbsp;desktop one at&nbsp;all.
+                          I&nbsp;chose the medium after the redesign, not before. We redrew the desktop
+                          exchange, built a&nbsp;prototype, ran a&nbsp;user through it&nbsp;— and only that
+                          run showed the flow wasn’t a&nbsp;desktop flow at&nbsp;all.
                         </p>
                         <p class="text">
-                          The question “which medium does this scenario live
-                          on?” should have come before drawing screens. Part
-                          of&nbsp;the interactions had to&nbsp;be&nbsp;designed
-                          again, this time for mobile.
-                        </p>
-                        <p class="text">
-                          The situation itself was a&nbsp;reason to&nbsp;consider
-                          the phone earlier. A&nbsp;person shows their medical
-                          documents to&nbsp;someone else, most often when that
-                          person is&nbsp;nearby. That’s a&nbsp;conversation with
-                          a&nbsp;phone in&nbsp;hand, and reason enough to&nbsp;test
-                          this option before detailing desktop screens.
+                          The question “which medium does this flow live on” should have been asked before
+                          drawing screens. Some interactions had to&nbsp;be designed again, this time
+                          for&nbsp;mobile.
                         </p>
                       </div>
                     </div>
@@ -1108,6 +1076,7 @@
       </div>
     </div>
 
+    <script src="../../js/menu.js"></script>
     <script src="../../js/main.js"></script>
   </body>
 </html>
