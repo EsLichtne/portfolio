@@ -1380,14 +1380,11 @@ body {
     grid-column: unset;
     grid-row: unset;
     padding-inline: 0;
-    border-top: 1px solid var(--border);
     border-bottom: 1px solid var(--border);
   }
 
-  .case-metric--secondary,
-  .case-metric--tertiary,
-  .case-metric--quaternary {
-    border-top: none;
+  .case-metric--tertiary {
+    border-bottom: none;
   }
 
   .case-nav {
